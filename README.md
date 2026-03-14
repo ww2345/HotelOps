@@ -68,3 +68,5 @@ This makes the admin dashboard show persistent data from the database (not regen
 - `models/` — Mongoose models (`AdminUsers.js`, `Room.js`, `Booking.js`)
 - `views/` — EJS templates and layout
 - `public/` — static assets (CSS)
+
+## Devlopment stage 
