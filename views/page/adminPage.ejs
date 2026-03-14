@@ -1,0 +1,147 @@
+<% layout("layout/boilerplate") -%>
+
+<section class="py-4" id="dashboard">
+  <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center justify-content-between gap-3 mb-4">
+    <div>
+      <p class="text-muted mb-1">Admin dashboard</p>
+      <h1 class="h3 mb-0">HotelOps Control Center</h1>
+      <% if (typeof adminUser === "string" && adminUser) { %>
+        <div class="text-muted small mt-1">Signed in as <strong><%= adminUser %></strong></div>
+      <% } %>
+    </div>
+    <div class="d-flex flex-wrap gap-2">
+      <a class="btn btn-outline-dark btn-sm" href="/"><i class="fa-solid fa-house me-2"></i>Home</a>
+      <a class="btn btn-dark btn-sm" href="/contact"><i class="fa-solid fa-headset me-2"></i>Support</a>
+    </div>
+  </div>
+
+  <div class="row g-3">
+    <div class="col-12 col-md-6 col-xl-3">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center justify-content-between">
+            <div>
+              <div class="text-muted small">Occupancy</div>
+              <div class="h3 mb-0"><%= stats.occupancy %>%</div>
+            </div>
+            <div class="rounded-4 border bg-white px-3 py-2"><i class="fa-solid fa-chart-pie"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-xl-3">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center justify-content-between">
+            <div>
+              <div class="text-muted small">Available rooms</div>
+              <div class="h3 mb-0"><%= stats.available %></div>
+            </div>
+            <div class="rounded-4 border bg-white px-3 py-2"><i class="fa-solid fa-door-open"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-xl-3">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center justify-content-between">
+            <div>
+              <div class="text-muted small">Arrivals</div>
+              <div class="h3 mb-0"><%= stats.arrivals %></div>
+            </div>
+            <div class="rounded-4 border bg-white px-3 py-2"><i class="fa-solid fa-person-walking-luggage"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-xl-3">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center justify-content-between">
+            <div>
+              <div class="text-muted small">Pending payments</div>
+              <div class="h3 mb-0"><%= stats.pendingPayments %></div>
+            </div>
+            <div class="rounded-4 border bg-white px-3 py-2"><i class="fa-solid fa-receipt"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-4 mt-1">
+    <div class="col-12 col-xl-7" id="bookings">
+      <div class="card shadow-sm">
+        <div class="card-header bg-white d-flex align-items-center justify-content-between">
+          <strong>Recent bookings</strong>
+          <span class="text-muted small">Random demo data</span>
+        </div>
+        <div class="table-responsive">
+          <table class="table align-middle mb-0">
+            <thead class="table-light">
+              <tr>
+                <th>Booking</th>
+                <th>Guest</th>
+                <th>Room</th>
+                <th>Dates</th>
+                <th>Status</th>
+                <th class="text-end">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for (const b of bookings) { %>
+                <% const statusClass = b.status === "Cancelled" ? "text-bg-danger" : (b.status === "Checked-in" ? "text-bg-success" : (b.status === "Checked-out" ? "text-bg-secondary" : "text-bg-primary")); %>
+                <% const payClass = b.paymentStatus === "Paid" ? "text-bg-success" : (b.paymentStatus === "Pending" ? "text-bg-warning" : "text-bg-secondary"); %>
+                <tr>
+                  <td class="fw-semibold"><%= b.id %></td>
+                  <td><%= b.guest %></td>
+                  <td><span class="badge text-bg-light border"><%= b.room %></span></td>
+                  <td class="text-muted small"><%= b.checkIn %> → <%= b.checkOut %> (<%= b.nights %>n)</td>
+                  <td>
+                    <div class="d-flex flex-wrap gap-2">
+                      <span class="badge <%= statusClass %>"><%= b.status %></span>
+                      <span class="badge <%= payClass %>"><%= b.paymentStatus %></span>
+                    </div>
+                  </td>
+                  <td class="text-end fw-semibold">₹<%= b.amount.toLocaleString() %></td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-xl-5" id="rooms">
+      <div class="card shadow-sm">
+        <div class="card-header bg-white d-flex align-items-center justify-content-between">
+          <strong>Rooms</strong>
+          <span class="text-muted small">Status overview</span>
+        </div>
+        <div class="card-body">
+          <div class="row g-3">
+            <% for (const r of rooms) { %>
+              <% const roomClass = r.status === "Occupied" ? "text-bg-danger" : (r.status === "Available" ? "text-bg-success" : (r.status === "Cleaning" ? "text-bg-warning" : "text-bg-secondary")); %>
+              <div class="col-12 col-md-6">
+                <div class="p-3 border rounded-4 bg-white h-100">
+                  <div class="d-flex align-items-start justify-content-between gap-2">
+                    <div>
+                      <div class="fw-semibold">Room <%= r.number %></div>
+                      <div class="text-muted small">Floor <%= r.floor %> • <%= r.type %></div>
+                    </div>
+                    <span class="badge <%= roomClass %>"><%= r.status %></span>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between mt-3">
+                    <div class="text-muted small"><i class="fa-solid fa-broom me-2"></i><%= r.housekeeping %></div>
+                    <div class="fw-semibold">₹<%= r.rate.toLocaleString() %>/night</div>
+                  </div>
+                </div>
+              </div>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

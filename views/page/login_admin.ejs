@@ -1,0 +1,138 @@
+<% layout("layout/boilerplate") -%>
+
+<section class="py-4">
+  <div class="row g-4 align-items-stretch">
+    <div class="col-12 col-lg-6">
+      <div class="card shadow-sm h-100 border-0" style="border-radius: 28px; background: rgba(255,255,255,0.72); backdrop-filter: blur(18px); box-shadow: var(--shadow);">
+        <div class="card-body p-4 p-lg-5">
+          <p class="text-muted mb-2">Admin access</p>
+          <h1 class="mb-3" style="font-family: 'Playfair Display', serif;">Sign in to HotelOps</h1>
+          <p class="text-muted mb-4">
+            Manage reservations, room status, housekeeping, and billing from one dashboard.
+          </p>
+
+          <div class="d-flex flex-column gap-3">
+            <div class="d-flex align-items-start gap-3">
+              <div class="rounded-4 border bg-white px-3 py-2">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <div>
+                <div class="fw-semibold">Secure login</div>
+                <div class="text-muted small">Use your admin credentials to continue.</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start gap-3">
+              <div class="rounded-4 border bg-white px-3 py-2">
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+              <div>
+                <div class="fw-semibold">Fast operations</div>
+                <div class="text-muted small">Quick check-ins, room updates, and invoices.</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start gap-3">
+              <div class="rounded-4 border bg-white px-3 py-2">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <div>
+                <div class="fw-semibold">Daily insights</div>
+                <div class="text-muted small">Track occupancy and pending payments.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-top mt-4 pt-4 small text-muted">
+            If you don’t have credentials yet, set `ADMIN_USER` and `ADMIN_PASS` in your environment (optional).
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6">
+      <div class="card shadow-sm h-100 border-0" style="border-radius: 28px; background: rgba(255,255,255,0.72); backdrop-filter: blur(18px); box-shadow: var(--shadow);">
+        <div class="card-body p-4 p-lg-5">
+          <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
+            <h2 class="h4 mb-0">Admin Login</h2>
+            <span class="badge text-bg-light border">Secure</span>
+          </div>
+
+          <% if (typeof error === "string" && error) { %>
+            <div class="alert alert-warning d-flex align-items-start gap-2" role="alert">
+              <i class="fa-solid fa-triangle-exclamation mt-1"></i>
+              <div><%= error %></div>
+            </div>
+          <% } %>
+
+          <form method="POST" action="/login" class="mt-3">
+            <div class="mb-3">
+              <label class="form-label fw-semibold" for="username">Username</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                <input
+                  class="form-control"
+                  id="username"
+                  name="username"
+                  type="text"
+                  placeholder="e.g. admin"
+                  value="<%= (typeof username === 'string' ? username : '') %>"
+                  autocomplete="username"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-semibold" for="password">Password</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+                <input
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  type="password"
+                  placeholder="Enter your password"
+                  autocomplete="current-password"
+                  required
+                />
+                <button class="btn btn-outline-secondary" type="button" id="togglePw">Show</button>
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+              <label class="form-check-label text-muted small">
+                <input class="form-check-input me-2" type="checkbox" name="remember" value="1" />
+                Remember me
+              </label>
+              <a class="small text-muted" href="#" onclick="return false;">Forgot password?</a>
+            </div>
+
+            <div class="d-grid gap-2">
+              <button class="btn btn-dark" type="submit">
+                <i class="fa-solid fa-right-to-bracket me-2"></i>Sign in
+              </button>
+              <a class="btn btn-outline-dark" href="/">
+                <i class="fa-solid fa-arrow-left me-2"></i>Back to home
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var input = document.getElementById("password");
+    var btn = document.getElementById("togglePw");
+    if (!input || !btn) return;
+
+    btn.addEventListener("click", function () {
+      var nextType = input.type === "password" ? "text" : "password";
+      input.type = nextType;
+      btn.textContent = nextType === "password" ? "Show" : "Hide";
+    });
+  })();
+</script>

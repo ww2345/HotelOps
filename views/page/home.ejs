@@ -1,0 +1,217 @@
+<% layout("layout/boilerplate") -%>
+
+  <section class="description-page py-4">
+    <section class="desc-hero mb-4">
+      <div class="desc-hero-media">
+        <img src="<%= hotel.heroImage %>" alt="Hotel exterior" loading="lazy" />
+        <div class="desc-hero-overlay"></div>
+      </div>
+
+      <div class="desc-hero-content">
+        <p class="desc-kicker">Welcome to</p>
+        <h1 class="mb-2">
+          <%= hotel.name %>
+        </h1>
+        <p class="desc-subtitle mb-3">
+          <%= hotel.tagline %>
+        </p>
+
+        <div class="d-flex flex-wrap gap-2">
+          <a class="btn btn-light btn-sm" href="/login">Admin login</a>
+          <a class="btn btn-outline-light btn-sm" href="/#features">Explore modules</a>
+          <a class="btn btn-outline-light btn-sm" href="/#contact">Contact</a>
+        </div>
+
+        <div class="desc-hero-stats mt-3">
+          <div class="stat">
+            <div class="stat-label">Rating</div>
+            <div class="stat-value">
+              <%= hotel.rating.toFixed(1) %> ★
+            </div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Reviews</div>
+            <div class="stat-value">
+              <%= hotel.reviews.toLocaleString() %>
+            </div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">HQ</div>
+            <div class="stat-value">
+              <%= hotel.hq.city %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <header class="mb-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between gap-3 align-items-start">
+        <div>
+          <p class="text-muted mb-1">Hotel Description</p>
+          <h2 class="h3 mb-2">About</h2>
+          <p class="lead mb-0">
+            <%= hotel.tagline %>
+          </p>
+        </div>
+
+        <div class="card shadow-sm description-summary">
+          <div class="card-body">
+            <% const fullStars=Math.floor(hotel.rating); %>
+              <% const hasHalf=(hotel.rating - fullStars)>= 0.5; %>
+                <div class="d-flex align-items-center justify-content-between gap-3">
+                  <div>
+                    <div class="rating-stars" aria-label="Hotel rating">
+                      <% for (let i=1; i <=5; i++) { %>
+                        <% const filled=i <=fullStars; %>
+                          <% const half=!filled && hasHalf && i===(fullStars + 1); %>
+                            <span class="<%= filled ? 'star-filled' : (half ? 'star-half' : 'star-empty') %>">★</span>
+                            <% } %>
+                    </div>
+                    <div class="mt-1">
+                      <strong>
+                        <%= hotel.rating.toFixed(1) %>
+                      </strong>
+                      <span class="text-muted">/ 5</span>
+                      <span class="text-muted">• <%= hotel.reviews.toLocaleString() %> reviews</span>
+                    </div>
+                  </div>
+                  <div class="text-end">
+                    <div class="badge text-bg-light border">
+                      <%= hotel.priceRange %>
+                    </div>
+                    <div class="small text-muted mt-2">Check‑in <%= hotel.checkIn %>
+                    </div>
+                    <div class="small text-muted">Check‑out <%= hotel.checkOut %>
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="row g-4">
+      <div class="col-12 col-lg-7">
+        <div class="card shadow-sm h-100">
+          <div class="card-header bg-white">
+            <strong>Location</strong>
+          </div>
+          <div class="card-body">
+            <p class="mb-2">
+              Head office: <strong>
+                <%= hotel.hq.area %>, <%= hotel.hq.city %>
+              </strong>
+            </p>
+            <p class="text-muted mb-3">
+              Established <%= hotel.founded %>. We focus on clean rooms, quick service, and clear billing for
+                front desk operations.
+            </p>
+            <div class="desc-gallery mb-3" aria-label="Hotel gallery">
+              <% for (const src of hotel.gallery) { %>
+                <img class="desc-thumb" src="<%= src %>" alt="Hotel photo" loading="lazy" />
+                <% } %>
+            </div>
+            <div class="map-placeholder" role="img" aria-label="Map placeholder">
+              <div>
+                <strong>
+                  <%= hotel.hq.city %>
+                </strong>
+                <div class="text-muted small">Near major transit • Easy cab access</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-5">
+        <div class="card shadow-sm h-100">
+          <div class="card-header bg-white">
+            <strong>Highlights</strong>
+          </div>
+          <div class="card-body">
+            <ul class="list-check mb-3">
+              <% for (const item of hotel.highlights) { %>
+                <li>
+                  <%= item %>
+                </li>
+                <% } %>
+            </ul>
+            <div class="border-top pt-3">
+              <strong class="d-block mb-2">Amenities</strong>
+              <div class="d-flex flex-wrap gap-2">
+                <% for (const a of hotel.amenities) { %>
+                  <span class="badge text-bg-light border">
+                    <%= a %>
+                  </span>
+                  <% } %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="mt-4" id="branches">
+      <div class="d-flex align-items-end justify-content-between gap-3 flex-wrap">
+        <div>
+          <h2 class="h4 mb-1">Branches</h2>
+          <p class="text-muted mb-0">A few of our popular locations (randomized on each refresh).</p>
+        </div>
+        <a class="btn btn-outline-dark btn-sm" href="/#contact">Group booking enquiry</a>
+      </div>
+
+      <div class="row g-3 mt-2">
+        <% for (const b of branches) { %>
+          <div class="col-12 col-md-6 col-xl-4">
+            <div class="card shadow-sm branch-card h-100">
+              <div class="card-body">
+                <div class="d-flex justify-content-between gap-3">
+                  <div>
+                    <h3 class="h5 mb-1">
+                      <%= b.city %>
+                    </h3>
+                    <div class="text-muted">
+                      <%= b.area %>
+                    </div>
+                  </div>
+                  <div class="text-end">
+                    <div class="badge text-bg-light border">
+                      <%= b.rating.toFixed(1) %> ★
+                    </div>
+                    <div class="small text-muted mt-2">Call</div>
+                    <div class="small">
+                      <%= b.phone %>
+                    </div>
+                  </div>
+                </div>
+                <div class="border-top mt-3 pt-3 small text-muted">
+                  Services: Wi‑Fi • Breakfast • Housekeeping • Support desk
+                </div>
+              </div>
+            </div>
+          </div>
+          <% } %>
+      </div>
+    </section>
+
+    <section class="mt-4" id="contact">
+      <div class="card shadow-sm overflow-hidden">
+        <div class="card-body p-4">
+          <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start gap-3">
+            <div>
+              <p class="text-muted mb-1">Contact</p>
+              <h2 class="h4 mb-2">Need help with a booking or a business stay?</h2>
+              <p class="text-muted mb-0">
+                Email us for corporate rates, group bookings, or long stays. We respond within 24 hours.
+              </p>
+            </div>
+            <div class="d-flex flex-wrap gap-2">
+              <a class="btn btn-dark" href="/contact">Contact us</a>
+              <a class="btn btn-outline-dark" href="/login">Admin login</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
