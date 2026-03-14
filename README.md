@@ -54,7 +54,7 @@ Create an admin user record (example) in the `hotel_management` DB:
 
 Then log in at `/login`.
 
-Security note: passwords are currently compared as **plain text** (demo-only). For real apps, use hashing (bcrypt) + proper auth flows.
+
 
 ## Demo data seeding (Rooms & Bookings)
 On successful MongoDB connection, the app seeds demo data **once** if the collections are empty:
