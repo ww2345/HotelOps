@@ -16,13 +16,8 @@ async function main() {
 }
 
 main()
-  .then(async () => {
+  .then(() => {
     console.log("Database connection successfull");
-    try {
-      await seedDemoDataIfEmpty();
-    } catch (err) {
-      console.error("Seed error:", err);
-    }
   })
   .catch((err) => {
     console.log(err);
@@ -54,73 +49,9 @@ const randomFloat = (min, max, decimals = 1) => {
   return Number(value.toFixed(decimals));
 };
 
-const requireAdmin = (req, res, next) => {
+const requireAdmin = (req, res, next) => { // this is the midleware for authaticating user is login or not 
   if (req.session?.isAdmin) return next();
   return res.redirect("/login");
-};
-
-const seedDemoDataIfEmpty = async () => {
-  const roomCount = await Room.estimatedDocumentCount();
-  const bookingCount = await Booking.estimatedDocumentCount();
-  if (roomCount > 0 && bookingCount > 0) return;
-
-  const roomTypes = ["Standard", "Deluxe", "Suite", "Family", "Executive"];
-  const roomStatuses = ["Available", "Occupied", "Cleaning", "Maintenance"];
-  const bookingStatuses = ["Confirmed", "Checked-in", "Checked-out", "Cancelled"];
-  const paymentStatuses = ["Paid", "Pending", "Refunded"];
-  const guestsFirst = ["Aarav", "Ishant", "Diya", "Anaya", "Rohan", "Meera", "Kabir", "Isha", "Arjun", "Sana"];
-  const guestsLast = ["Sharma", "Dahiya", "Verma", "Gupta", "Singh", "Patel", "Khan", "Jain", "Nair", "Iyer"];
-
-  const today = new Date();
-  const yyyymmdd = `${today.getFullYear()}${String(today.getMonth() + 1).padStart(2, "0")}${String(
-    today.getDate()
-  ).padStart(2, "0")}`;
-
-  const makeDate = (offsetDays) => {
-    const d = new Date(today);
-    d.setHours(12, 0, 0, 0);
-    d.setDate(d.getDate() + offsetDays);
-    return d;
-  };
-
-  if (roomCount === 0) {
-    const rooms = Array.from({ length: 30 }, (_, i) => {
-      const floor = 1 + Math.floor(i / 10);
-      const number = floor * 100 + (i % 10) + 1;
-      const status = pick(roomStatuses);
-      const housekeeping = status === "Cleaning" ? "In progress" : pick(["Ready", "Pending", "In progress"]);
-      const type = pick(roomTypes);
-      const rate = randomInt(2200, 9500);
-      return { number, floor, type, status, housekeeping, rate };
-    });
-    await Room.insertMany(rooms, { ordered: false });
-  }
-
-  if (bookingCount === 0) {
-    const rooms = await Room.find({}, { number: 1 }).lean();
-    const roomNumbers = rooms.map((r) => r.number);
-    const bookings = Array.from({ length: 22 }, (_, i) => {
-      const nights = randomInt(1, 5);
-      const checkInOffset = randomInt(-2, 4);
-      const status = pick(bookingStatuses);
-      const paymentStatus = pick(paymentStatuses);
-      const guest = `${pick(guestsFirst)} ${pick(guestsLast)}`;
-      const room = pick(roomNumbers);
-      const amount = randomInt(2800, 24000);
-      return {
-        bookingId: `BK-${yyyymmdd}-${100 + i}`,
-        guest,
-        room,
-        checkIn: makeDate(checkInOffset),
-        checkOut: makeDate(checkInOffset + nights),
-        nights,
-        status,
-        paymentStatus,
-        amount,
-      };
-    });
-    await Booking.insertMany(bookings, { ordered: false });
-  }
 };
 
 app.listen(port, () => {
@@ -223,32 +154,52 @@ app.post("/login", async (req, res) => {
 });
 
 app.get("/admin", requireAdmin, async (req, res) => {
-  const rooms = await Room.find().sort({ number: 1 }).limit(18).lean();
-  const bookingsRaw = await Booking.find().sort({ createdAt: -1 }).limit(10).lean();
+  try {
+    const [rooms, bookedRoomNumbers] = await Promise.all([
+      Room.find().sort({ room: 1 }).lean(),
+      Booking.distinct("room"),
+    ]);
 
-  const bookings = bookingsRaw.map((b) => ({
-    ...b,
-    id: b.bookingId,
-    checkIn: new Date(b.checkIn).toISOString().slice(0, 10),
-    checkOut: new Date(b.checkOut).toISOString().slice(0, 10),
-  }));
+    const bookedRooms = bookedRoomNumbers
+      .map((n) => (typeof n === "number" ? n : Number(n)))
+      .filter((n) => Number.isFinite(n));
 
-  const stats = {
-    occupancy: rooms.length
-      ? Math.round((rooms.filter((r) => r.status === "Occupied").length / rooms.length) * 100)
-      : 0,
-    available: rooms.filter((r) => r.status === "Available").length,
-    arrivals: bookingsRaw.filter((b) => b.status === "Confirmed").length,
-    pendingPayments: bookingsRaw.filter((b) => b.paymentStatus === "Pending").length,
-  };
+    // Occupancy is based on bookings so it matches the bookings page counts better.
+    // If you want it driven by Room.status instead, switch back to counting status === "occupied".
+    const occupiedRooms = new Set(bookedRooms).size;
+    const availableRooms = Math.max(0, rooms.length - occupiedRooms);
 
-  res.render("page/adminPage", {
-    nav: "admin",
-    adminUser: req.session?.adminUser,
-    stats,
-    bookings,
-    rooms,
-  });
+    const stats = { // this is the statics show the percentage etc. 
+      totalRooms: rooms.length,
+      occupiedRooms,
+      availableRooms,
+      occupancyPct: rooms.length ? Math.round((occupiedRooms / rooms.length) * 100) : 0,
+    };
+
+    res.render("page/adminPage", {
+      nav: "admin",
+      adminUser: req.session?.adminUser,
+      stats,
+      rooms,
+    });
+  } catch (err) {
+    console.error("Admin dashboard error:", err);
+    res.status(500).send("Failed to load admin dashboard.");
+  }
+});
+
+app.get("/admin/bookings", requireAdmin, async (req, res) => {
+  try {
+    const bookings = await Booking.find().sort({ _id: -1 }).limit(50).lean();
+
+    res.render("page/bookings", {
+      adminUser: req.session?.adminUser,
+      bookings,
+    });
+  } catch (err) {
+    console.error("Bookings page error:", err);
+    res.status(500).send("Failed to load bookings.");
+  }
 });
 
 app.get("/logout", (req, res) => {

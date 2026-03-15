@@ -1,0 +1,58 @@
+<% layout("layout/boilerplate_admin.ejs") -%>
+
+  <div class="page-shell admin-shell">
+    <section class="py-4 admin-hero" id="bookings">
+
+
+      <div class="admin-panel">
+        <div class="table-responsive">
+          <table class="table table-hover align-middle mb-0 admin-table">
+            <thead>
+              <tr>
+                <th scope="col">Guest name</th>
+                <th scope="col">Room</th>
+                <th scope="col">Contact</th>
+                <th scope="col">Check-in</th>
+                <th scope="col">Check-out</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if (Array.isArray(bookings) && bookings.length) { %>
+                <% for (const b of bookings) { %>
+                  <tr>
+                    <td class="fw-semibold">
+                      <%= b?.name ?? "-" %>
+                    </td>
+                    <td><span class="badge text-bg-light border">
+                        <%= b?.room ?? "-" %>
+                      </span></td>
+                    <td class="text-muted">
+                      <%= b?.contactno ?? "-" %>
+                    </td>
+                    <td>
+                      <%= b?.checkin ?? "-" %>
+                    </td>
+                    <td>
+                      <%= b?.checkout ?? "-" %>
+                    </td>
+                  </tr>
+                  <% } %>
+                    <% } else { %>
+                      <tr>
+                        <td colspan="5">
+                          <div class="admin-empty">
+                            <div class="admin-empty-icon"><i class="fa-regular fa-folder-open"></i></div>
+                            <div>
+                              <div class="fw-semibold">No bookings found</div>
+                              <div class="text-muted small">Add bookings in MongoDB to see them here.</div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <% } %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>

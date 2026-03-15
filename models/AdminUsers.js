@@ -15,6 +15,6 @@ const adminLoginSchema = new mongoose.Schema({
 });
 
 // Use the existing `users` collection (your saved credentials are there).
-const admin = mongoose.model("Admin", adminLoginSchema, "users");
+const admin = mongoose.model("Admin", adminLoginSchema, "admin_users");
 
 module.exports = admin;
