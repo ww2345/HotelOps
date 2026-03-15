@@ -201,13 +201,77 @@ app.get("/admin/bookings", requireAdmin, async (req, res) => {
   }
 });
 
-app.get("/admin/booking/new_booking", (req, res) => {
-  res.render("page/new_booking");
-})
+app.get("/admin/booking/new_booking", requireAdmin, (req, res) => {
+  res.render("page/new_booking", { adminUser: req.session?.adminUser });
+});
 
-app.post("/admin/booking/new_booking", (req, res) => {
-  res.send("Booking Confirmed ");
-})
+app.post("/admin/booking/new_booking", requireAdmin, async (req, res) => {
+  try {
+    const name = String(req.body?.name || "").trim();
+    const contactno = Number(req.body?.contactno);
+    const room = Number(req.body?.room);
+    const checkin = String(req.body?.checkin || "").trim();
+    const checkout = String(req.body?.checkout || "").trim();
+
+    if (!name) return res.status(400).send("Guest name is required.");
+    if (!Number.isFinite(contactno)) return res.status(400).send("Valid contact number is required.");
+    if (!Number.isFinite(room)) return res.status(400).send("Valid room number is required.");
+    if (!checkin) return res.status(400).send("Check-in date & time is required.");
+    if (!checkout) return res.status(400).send("Check-out date & time is required.");
+
+    const lockedRoom = await Room.findOneAndUpdate(
+      { room, status: { $regex: /^available\s*$/i } },
+      { $set: { status: "occupied" } },
+      { returnDocument: "after" }
+    );
+
+    if (!lockedRoom) {
+      const exists = await Room.exists({ room });
+      if (!exists) return res.status(400).send("Invalid room.");
+      return res.status(409).send("Room is not available.");
+    }
+
+    try {
+      await Booking.create({ name, contactno, room, checkin, checkout });
+    } catch (err) {
+      await Room.updateOne({ room }, { $set: { status: "available" } });
+      throw err;
+    }
+
+    return res.redirect("/admin/bookings");
+  } catch (err) {
+    console.error("Create booking error:", err);
+    return res.status(500).send("Failed to create booking.");
+  }
+});
+
+app.post("/admin/booking/:id/checkout", requireAdmin, async (req, res) => {
+  try {
+    const id = String(req.params?.id || "").trim();
+    if (!mongoose.Types.ObjectId.isValid(id)) return res.status(400).send("Invalid booking id.");
+
+    const booking = await Booking.findById(id).lean();
+    if (!booking) return res.status(404).send("Booking not found.");
+
+    const roomNo = typeof booking.room === "number" ? booking.room : Number(booking.room);
+    if (!Number.isFinite(roomNo)) return res.status(400).send("Invalid room number on booking.");
+
+    const roomUpdate = await Room.updateOne({ room: roomNo }, { $set: { status: "available" } });
+    if (!roomUpdate.matchedCount) return res.status(400).send("Invalid room.");
+
+    try {
+      await Booking.deleteOne({ _id: id });
+    } catch (err) {
+      await Room.updateOne({ room: roomNo }, { $set: { status: "occupied" } });
+      throw err;
+    }
+
+    return res.redirect("/admin/bookings");
+  } catch (err) {
+    console.error("Checkout error:", err);
+    return res.status(500).send("Failed to checkout booking.");
+  }
+});
 
 app.get("/logout", (req, res) => {
   req.session.destroy(() => {

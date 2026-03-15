@@ -69,57 +69,58 @@
       </div>
 
       <div class="admin-panel">
-        <div class="table-responsive">
-          <table class="table table-hover align-middle mb-0 admin-table">
-            <thead>
-              <tr>
-                <th scope="col">Room</th>
-                <th scope="col">Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% if (Array.isArray(rooms) && rooms.length) { %>
-                <% for (const r of rooms) { %>
-                  <% const s=String(r?.status ?? "" ).trim(); %>
-                    <% const sKey=s.toLowerCase(); %>
-                      <tr>
-                        <td class="fw-semibold">
-                          <%= r?.room ?? "-" %>
-                        </td>
-                        <td>
-                          <% if (!s) { %>
-                            <span class="text-muted">-</span>
-                            <% } else if (sKey==="available" ) { %>
-                              <span class="badge text-bg-success">
-                                <%= s %>
-                              </span>
-                              <% } else if (sKey==="occupied" ) { %>
-                                <span class="badge text-bg-danger">
-                                  <%= s %>
-                                </span>
-                                <% } else { %>
-                                  <span class="badge text-bg-secondary">
-                                    <%= s %>
-                                  </span>
-                                  <% } %>
-                        </td>
-                      </tr>
-                      <% } %>
+        <div class="p-3 p-md-4">
+          <% const formatINR=(value)=>{ try { return new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR",maximumFractionDigits:0}).format(value); } catch(e) { return `₹${value}`; } }; %>
+
+          <% if (Array.isArray(rooms) && rooms.length) { %>
+            <div class="row g-3">
+              <% for (const r of rooms) { %>
+                <% const roomNo=r?.room ?? "-"; %>
+                <% const s=String(r?.status ?? "" ).trim(); %>
+                <% const sKey=s.toLowerCase(); %>
+                <% const priceNum=Number(r?.price); %>
+                <% const priceLabel=Number.isFinite(priceNum) ? formatINR(priceNum) : "-"; %>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                  <div class="admin-room-card h-100">
+                    <div class="d-flex align-items-start justify-content-between gap-3">
+                      <div>
+                        <div class="text-muted small">Room</div>
+                        <div class="admin-room-number"><%= roomNo %></div>
+                      </div>
+                      <div class="text-end">
+                        <% if (!s) { %>
+                          <span class="text-muted">-</span>
+                        <% } else if (sKey==="available" ) { %>
+                          <span class="badge text-bg-success"><%= s %></span>
+                        <% } else if (sKey==="occupied" ) { %>
+                          <span class="badge text-bg-danger"><%= s %></span>
                         <% } else { %>
-                          <tr>
-                            <td colspan="2">
-                              <div class="admin-empty">
-                                <div class="admin-empty-icon"><i class="fa-regular fa-folder-open"></i></div>
-                                <div>
-                                  <div class="fw-semibold">No rooms yet</div>
-                                  <div class="text-muted small">Rooms added in MongoDB will appear here.</div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <% } %>
-            </tbody>
-          </table>
+                          <span class="badge text-bg-secondary"><%= s %></span>
+                        <% } %>
+                      </div>
+                    </div>
+
+                    <div class="admin-room-meta">
+                      <div>
+                        <div class="text-muted small">Price</div>
+                        <div class="admin-room-price"><%= priceLabel %></div>
+                      </div>
+                      <div class="admin-room-icon text-muted"><i class="fa-solid fa-tag"></i></div>
+                    </div>
+                  </div>
+                </div>
+              <% } %>
+            </div>
+          <% } else { %>
+            <div class="admin-empty">
+              <div class="admin-empty-icon"><i class="fa-regular fa-folder-open"></i></div>
+              <div>
+                <div class="fw-semibold">No rooms yet</div>
+                <div class="text-muted small">Rooms added in MongoDB will appear here.</div>
+              </div>
+            </div>
+          <% } %>
         </div>
       </div>
     </section>

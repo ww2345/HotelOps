@@ -22,27 +22,35 @@
       <div class="admin-panel">
         <div class="p-3 p-md-4">
           <form class="row g-3" action="/admin/booking/new_booking" method="post">
-            <div class="col-12 col-lg-6">
-              <label for="bookingName" class="form-label fw-semibold">Name</label>
-              <input type="text" class="form-control" id="bookingName" aria-describedby="emailHelp"
-                placeholder="Guest name" name="name" required>
-            </div>
+	            <div class="col-12 col-lg-6">
+	              <label for="bookingName" class="form-label fw-semibold">Name</label>
+	              <input type="text" class="form-control" id="bookingName" aria-describedby="emailHelp"
+	                placeholder="Guest name" name="name" required>
+	            </div>
 
-            <div class="col-12 col-lg-6">
-              <label for="bookingContact" class="form-label fw-semibold">Contact</label>
-              <input type="tel" class="form-control" id="bookingContact" placeholder="Contact number" name="contactno"
-                inputmode="numeric" pattern="[0-9]+" required>
-            </div>
+	            <div class="col-12 col-lg-6">
+	              <label for="bookingContact" class="form-label fw-semibold">Contact</label>
+	              <input type="tel" class="form-control" id="bookingContact" placeholder="Contact number" name="contactno"
+	                inputmode="numeric" pattern="[0-9]+" required>
+	            </div>
 
-            <div class="col-12">
-              <label for="bookingCheckin" class="form-label fw-semibold">Check-in Time</label>
-              <input type="time" class="form-control" id="bookingCheckin" name="checkin" step="60" required>
-            </div>
+	            <div class="col-12 col-lg-6">
+	              <label for="bookingRoom" class="form-label fw-semibold">Room No</label>
+	              <input type="number" class="form-control" id="bookingRoom" placeholder="Room no" name="room" min="1"
+	                step="1" required>
+	            </div>
 
-            <div class="col-12">
-              <label for="bookingCheckin" class="form-label fw-semibold">Check-out Time</label>
-              <input type="time" class="form-control" id="bookingCheckout" name="checkin" step="60" required>
-            </div>
+	            <div class="col-12">
+	              <label for="bookingCheckin" class="form-label fw-semibold">Check-in Date &amp; Time</label>
+	              <input type="datetime-local" class="form-control" id="bookingCheckin" name="checkin" step="60"
+	                required>
+	            </div>
+
+	            <div class="col-12">
+	              <label for="bookingCheckout" class="form-label fw-semibold">Check-out Date &amp; Time</label>
+	              <input type="datetime-local" class="form-control" id="bookingCheckout" name="checkout" step="60"
+	                required>
+	            </div>
 
             <div class="col-12 d-flex flex-column flex-sm-row gap-2 justify-content-end pt-2">
               <a class="btn btn-outline-dark" href="/admin/bookings">Cancel</a>

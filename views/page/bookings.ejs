@@ -15,6 +15,7 @@
                 <th scope="col">Contact</th>
                 <th scope="col">Check-in</th>
                 <th scope="col">Check-out</th>
+                <th scope="col">Action</th>
               </tr>
             </thead>
             <tbody>
@@ -36,11 +37,22 @@
                     <td>
                       <%= b?.checkout ?? "-" %>
                     </td>
+                    <td>
+                      <% if (b?._id) { %>
+                        <form action="/admin/booking/<%= b._id %>/checkout" method="post" class="d-inline">
+                          <button type="submit" class="btn btn-outline-danger btn-sm">
+                            Check-out
+                          </button>
+                        </form>
+                        <% } else { %>
+                          <span class="text-muted">-</span>
+                          <% } %>
+                    </td>
                   </tr>
                   <% } %>
                     <% } else { %>
                       <tr>
-                        <td colspan="5">
+                        <td colspan="6">
                           <div class="admin-empty">
                             <div class="admin-empty-icon"><i class="fa-regular fa-folder-open"></i></div>
                             <div>
