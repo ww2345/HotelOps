@@ -9,6 +9,10 @@ const roomSchema = new mongoose.Schema(
     status: {
       type: String,
       required: true
+    },
+    price: {
+      type: Number,
+      required: true
     }
   }
 

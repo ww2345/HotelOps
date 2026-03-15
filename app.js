@@ -164,8 +164,7 @@ app.get("/admin", requireAdmin, async (req, res) => {
       .map((n) => (typeof n === "number" ? n : Number(n)))
       .filter((n) => Number.isFinite(n));
 
-    // Occupancy is based on bookings so it matches the bookings page counts better.
-    // If you want it driven by Room.status instead, switch back to counting status === "occupied".
+
     const occupiedRooms = new Set(bookedRooms).size;
     const availableRooms = Math.max(0, rooms.length - occupiedRooms);
 
@@ -201,6 +200,14 @@ app.get("/admin/bookings", requireAdmin, async (req, res) => {
     res.status(500).send("Failed to load bookings.");
   }
 });
+
+app.get("/admin/booking/new_booking", (req, res) => {
+  res.render("page/new_booking");
+})
+
+app.post("/admin/booking/new_booking", (req, res) => {
+  res.send("Booking Confirmed ");
+})
 
 app.get("/logout", (req, res) => {
   req.session.destroy(() => {
