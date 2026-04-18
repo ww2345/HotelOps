@@ -69,3 +69,4 @@ This makes the admin dashboard show persistent data from the database (not regen
 - `views/` — EJS templates and layout
 - `public/` — static assets (CSS)
 
+Collage Project
