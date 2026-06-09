@@ -26,7 +26,7 @@
           <div class="stat">
             <div class="stat-label">Rating</div>
             <div class="stat-value">
-              <%= hotel.rating.toFixed(1) %> ★
+              4.8 ★
             </div>
           </div>
           <div class="stat">
@@ -38,7 +38,7 @@
           <div class="stat">
             <div class="stat-label">HQ</div>
             <div class="stat-value">
-              <%= hotel.hq.city %>
+              Delhi
             </div>
           </div>
         </div>
@@ -59,33 +59,7 @@
           <div class="card-body">
             <% const fullStars=Math.floor(hotel.rating); %>
               <% const hasHalf=(hotel.rating - fullStars)>= 0.5; %>
-                <div class="d-flex align-items-center justify-content-between gap-3">
-                  <div>
-                    <div class="rating-stars" aria-label="Hotel rating">
-                      <% for (let i=1; i <=5; i++) { %>
-                        <% const filled=i <=fullStars; %>
-                          <% const half=!filled && hasHalf && i===(fullStars + 1); %>
-                            <span class="<%= filled ? 'star-filled' : (half ? 'star-half' : 'star-empty') %>">★</span>
-                            <% } %>
-                    </div>
-                    <div class="mt-1">
-                      <strong>
-                        <%= hotel.rating.toFixed(1) %>
-                      </strong>
-                      <span class="text-muted">/ 5</span>
-                      <span class="text-muted">• <%= hotel.reviews.toLocaleString() %> reviews</span>
-                    </div>
-                  </div>
-                  <div class="text-end">
-                    <div class="badge text-bg-light border">
-                      <%= hotel.priceRange %>
-                    </div>
-                    <div class="small text-muted mt-2">Check‑in <%= hotel.checkIn %>
-                    </div>
-                    <div class="small text-muted">Check‑out <%= hotel.checkOut %>
-                    </div>
-                  </div>
-                </div>
+
           </div>
         </div>
       </div>
@@ -100,12 +74,12 @@
           <div class="card-body">
             <p class="mb-2">
               Head office: <strong>
-                <%= hotel.hq.area %>, <%= hotel.hq.city %>
+                Rajori Garden , Delhi
               </strong>
             </p>
             <p class="text-muted mb-3">
-              Established <%= hotel.founded %>. We focus on clean rooms, quick service, and clear billing for
-                front desk operations.
+              Established 1991. We focus on clean rooms, quick service, and clear billing for
+              front desk operations.
             </p>
             <div class="desc-gallery mb-3" aria-label="Hotel gallery">
               <% for (const src of hotel.gallery) { %>
