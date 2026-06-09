@@ -74,7 +74,7 @@ SECTIONS = [
             "The configured port is 9999, so local users open the app through http://127.0.0.1:9999/.",
             "The server configures EJS, static file serving, URL-encoded form parsing, and sessions before defining route handlers.",
             "Database connection startup happens near the beginning so Mongoose models can be used by the routes.",
-            "The entry point is intentionally compact, making it easy to explain during a project viva or classroom demonstration.",
+            "The entry point is intentionally compact, making it easy to explain during a college project demonstration.",
         ],
     ),
     (
@@ -669,27 +669,46 @@ CODE_EXAMPLES = {
 }
 
 DEFAULT_CODE_EXAMPLES = [
-    "// Typical HotelOps route shape",
-    "app.get(\"/some-route\", requireAdmin, async (req, res) => {",
-    "  const records = await Model.find().lean();",
-    "  return res.render(\"page/template\", { records });",
+    "// Typical HotelOps protected route pattern",
+    "app.get(\"/admin/example\", requireAdmin, async (req, res) => {",
+    "  try {",
+    "    const records = await Model.find().sort({ _id: -1 }).lean();",
+    "    return res.render(\"page/template\", {",
+    "      adminUser: req.session?.adminUser,",
+    "      records,",
+    "    });",
+    "  } catch (err) {",
+    "    console.error(\"Route error:\", err);",
+    "    return res.status(500).send(\"Failed to load page.\");",
+    "  }",
     "});",
 ]
+
 
 
 def technical_details_for(title: str, page_number: int) -> list[str]:
     first = TECHNICAL_NOTES[(page_number - 4) % len(TECHNICAL_NOTES)]
     return [
         first,
-        f"Implementation focus for this topic: connect the explanation to the '{title}' responsibility and identify which route, schema, or template owns the behavior.",
-        "Code reading tip: start at the Express route, follow the Mongoose query or update, then inspect the EJS template that receives the data.",
-        "Presentation tip: explain the input, processing step, database interaction, output, and possible error case for this topic.",
-        "Improvement tip: mention one production enhancement such as environment variables, password hashing, indexes, pagination, or automated tests.",
+        f"Implementation focus: identify the route, schema, template, or stylesheet that owns the '{title}' behavior.",
+        "Functional flow: describe the input received by the server, the database operation performed, and the response returned to the browser.",
     ]
 
 
 def code_examples_for(title: str) -> list[str]:
-    return CODE_EXAMPLES.get(title, DEFAULT_CODE_EXAMPLES)
+    base = CODE_EXAMPLES.get(title, DEFAULT_CODE_EXAMPLES)
+    if len(base) >= 10:
+        return base
+    supporting = [
+        "// Supporting implementation pattern used in HotelOps",
+        "const payload = { adminUser: req.session?.adminUser };",
+        "const query = Model.find().sort({ _id: -1 }).lean();",
+        "const records = await query;",
+        "return res.render(\"page/template\", { ...payload, records });",
+        "// Errors are handled by route-level try/catch blocks.",
+        "// Production improvement: move this logic into a route module or service.",
+    ]
+    return base + supporting[: max(0, 11 - len(base))]
 
 
 def escape_pdf(text: str) -> str:
@@ -735,46 +754,29 @@ class SimplePdf:
         self.current_y = TOP_Y
         lines: list[tuple[str, int, str]] = []
         lines.append((f"{page_number}. {title}", 17, "bold"))
-        lines.append(("Project explanation", 11, "bold"))
-        for idx, paragraph in enumerate(body, 1):
-            wrapped = textwrap.wrap(paragraph, width=86)
+        lines.append(("Functionality overview (40%)", 11, "bold"))
+        functionality_points = body[:4] + technical_details_for(title, page_number)[:2]
+        for idx, paragraph in enumerate(functionality_points, 1):
+            wrapped = textwrap.wrap(paragraph, width=88)
             prefix = f"{idx}. "
             for line_index, line in enumerate(wrapped):
-                lines.append(((prefix if line_index == 0 else "   ") + line, 9, "regular"))
+                lines.append(((prefix if line_index == 0 else "   ") + line, 8, "regular"))
         lines.append(("", 4, "regular"))
-        lines.append(("Technical implementation details", 11, "bold"))
-        for idx, paragraph in enumerate(technical_details_for(title, page_number), 1):
-            wrapped = textwrap.wrap(paragraph, width=88)
-            prefix = f"T{idx}. "
-            for line_index, line in enumerate(wrapped):
-                lines.append(((prefix if line_index == 0 else "    ") + line, 8, "regular"))
-        lines.append(("", 4, "regular"))
-        lines.append(("Code focus", 11, "bold"))
-        for code_line in code_examples_for(title):
-            for line in textwrap.wrap(code_line, width=76, replace_whitespace=False, drop_whitespace=False):
+        lines.append(("Technical code reference (60%)", 11, "bold"))
+        code_lines = code_examples_for(title)
+        for code_line in code_lines:
+            for line in textwrap.wrap(code_line, width=82, replace_whitespace=False, drop_whitespace=False):
                 lines.append(("  " + line, 8, "code"))
         lines.append(("", 4, "regular"))
-        lines.append(("Technical walkthrough checklist", 11, "bold"))
-        checklist = [
-            "Route: name the HTTP method and URL that starts the workflow.",
-            "Input: identify req.params, req.query, req.body, or req.session values used by the code.",
-            "Database: identify the Mongoose model call and whether it reads, creates, updates, or deletes data.",
-            "View: identify the template and variables passed into res.render or the redirect returned to the browser.",
-            "Failure path: mention the validation, authentication, conflict, or server-error response.",
-            "Upgrade path: state one improvement that would make this part production-ready.",
+        lines.append(("Code-to-functionality mapping", 11, "bold"))
+        mapping_points = [
+            "Route/middleware code controls when this feature runs and whether the admin session is required.",
+            "Mongoose model code defines the data structure and performs the database read, create, update, or delete operation.",
+            "EJS/template code receives server variables and converts the result into a page that users can understand.",
         ]
-        for item in checklist:
+        for item in mapping_points:
             for line in textwrap.wrap(item, width=88):
                 lines.append(("- " + line, 8, "regular"))
-        lines.append(("", 4, "regular"))
-        lines.append(("How to explain this page in viva", 11, "bold"))
-        viva = (
-            "Describe the requirement first, then point to the exact server code, model field, "
-            "template variable, or CSS class that implements it. Finish by naming one limitation "
-            "and one improvement so the explanation sounds technical and complete."
-        )
-        for line in textwrap.wrap(viva, width=88):
-            lines.append((line, 8, "regular"))
         self.add_page(lines, footer=f"HotelOps Project Explanation | Page {page_number} of {total_pages}")
 
     def write(self, path: Path) -> None:
@@ -837,27 +839,20 @@ def create_markdown(total_pages: int) -> str:
     lines.append("")
     for i, (title, body) in enumerate(PAGES, start_page):
         lines.extend([f"## Page {i}: {title}", ""])
-        lines.append("### Project explanation")
-        for paragraph in body:
+        lines.append("### Functionality overview (40%)")
+        for paragraph in body[:4] + technical_details_for(title, i)[:2]:
             lines.append(f"- {paragraph}")
         lines.append("")
-        lines.append("### Technical implementation details")
-        for paragraph in technical_details_for(title, i):
-            lines.append(f"- {paragraph}")
-        lines.append("")
-        lines.append("### Code focus")
+        lines.append("### Technical code reference (60%)")
         lines.append("```js")
         lines.extend(code_examples_for(title))
         lines.append("```")
         lines.append("")
-        lines.append("### Technical walkthrough checklist")
+        lines.append("### Code-to-functionality mapping")
         lines.extend([
-            "- Route: name the HTTP method and URL that starts the workflow.",
-            "- Input: identify req.params, req.query, req.body, or req.session values used by the code.",
-            "- Database: identify the Mongoose model call and whether it reads, creates, updates, or deletes data.",
-            "- View: identify the template and variables passed into res.render or the redirect returned to the browser.",
-            "- Failure path: mention the validation, authentication, conflict, or server-error response.",
-            "- Upgrade path: state one improvement that would make this part production-ready.",
+            "- Route/middleware code controls when this feature runs and whether the admin session is required.",
+            "- Mongoose model code defines the data structure and performs the database read, create, update, or delete operation.",
+            "- EJS/template code receives server variables and converts the result into a page that users can understand.",
         ])
         lines.append("")
     lines.append("## Generation")
