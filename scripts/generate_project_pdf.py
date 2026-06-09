@@ -565,125 +565,100 @@ TECHNICAL_NOTES = [
     "Maintenance responsibility: keep repeated UI pieces in includes, keep static assets in public, and move larger route groups into modules when the application grows.",
 ]
 
-CODE_EXAMPLES = {
-    "Project overview and purpose": [
-        "const express = require(\"express\");",
-        "let app = express();",
-        "const port = 9999;",
-        "app.listen(port, () => console.log(`listing on port ${port}....`));",
-    ],
-    "Technology stack summary": [
-        "app.engine(\"ejs\", ejsMate);",
-        "app.set(\"view engine\", \"ejs\");",
-        "app.use(express.urlencoded({ extended: true }));",
-        "app.use(express.static(path.join(__dirname, \"public\")));",
-    ],
-    "Database connection": [
-        "async function main() {",
-        "  await mongoose.connect(\"mongodb://127.0.0.1:27017/hotel_management\");",
-        "}",
-        "main().then(() => console.log(\"Database connection successfull\"));",
-    ],
-    "Session management": [
-        "app.use(session({",
-        "  secret: process.env.SESSION_SECRET || \"dev_secret_change_me\",",
-        "  resave: false, saveUninitialized: false,",
-        "  cookie: { httpOnly: true, sameSite: \"lax\", maxAge: 1000 * 60 * 60 * 6 },",
-        "}));",
-    ],
-    "Authorization middleware": [
-        "const requireAdmin = (req, res, next) => {",
-        "  if (req.session?.isAdmin) return next();",
-        "  return res.redirect(\"/login\");",
-        "};",
-    ],
-    "Admin authentication concept": [
-        "const foundAdmin = await admin.findOne({ username: user });",
-        "if (!foundAdmin) return res.status(401).render(\"page/login_admin\", loginError);",
-        "if (foundAdmin.password !== pass) return res.status(401).render(\"page/login_admin\", loginError);",
-        "req.session.isAdmin = true; req.session.adminUser = foundAdmin.username;",
-    ],
-    "Admin dashboard route": [
-        "const [rooms, bookedRoomNumbers] = await Promise.all([",
-        "  Room.find().sort({ room: 1 }).lean(),",
-        "  Booking.distinct(\"room\"),",
-        "]);",
-        "const occupancyPct = rooms.length ? Math.round((occupiedRooms / rooms.length) * 100) : 0;",
-    ],
-    "Room inventory model": [
-        "const roomSchema = new mongoose.Schema({",
-        "  room: { type: Number, required: true },",
-        "  status: { type: String, required: true },",
-        "  price: { type: Number, required: true }",
-        "});",
-    ],
-    "Booking model": [
-        "const bookingSchema = new mongoose.Schema({",
-        "  name: { type: String, required: true }, room: { type: Number, required: true },",
-        "  contactno: { type: Number, required: true }, checkin: { type: String }, checkout: { type: String }",
-        "});",
-    ],
-    "Admin user model": [
-        "const adminLoginSchema = new mongoose.Schema({",
-        "  username: { type: String, required: true, unique: true, maxLength: 25 },",
-        "  password: { type: String, required: true, minLength: 5 }",
-        "});",
-    ],
-    "Create booking page": [
-        "const lockedRoom = await Room.findOneAndUpdate(",
-        "  { room, status: { $regex: /^available\\s*$/i } },",
-        "  { $set: { status: \"occupied\" } },",
-        "  { returnDocument: \"after\" }",
-        ");",
-    ],
-    "Room locking during booking": [
-        "try { await Booking.create({ name, contactno, room, checkin, checkout }); }",
-        "catch (err) {",
-        "  await Room.updateOne({ room }, { $set: { status: \"available\" } });",
-        "  throw err;",
-        "}",
-    ],
-    "Checkout flow": [
-        "if (!mongoose.Types.ObjectId.isValid(id)) return res.status(400).send(\"Invalid booking id.\");",
-        "const booking = await Booking.findById(id).lean();",
-        "await Room.updateOne({ room: roomNo }, { $set: { status: \"available\" } });",
-        "await Booking.deleteOne({ _id: id });",
-    ],
-    "EJS layout strategy": [
-        "app.set(\"views\", path.join(__dirname, \"views\"));",
-        "res.render(\"page/adminPage\", { adminUser: req.session?.adminUser, stats, rooms });",
-        "<%- body %>",
-        "<%- include(\"../includes/navbarAdmin\") %>",
-    ],
-    "Styling system": [
-        ":root { --gold: #b98939; --surface: rgba(255, 255, 255, 0.78); }",
-        ".admin-shell .admin-kpi { display: flex; gap: 14px; align-items: center; }",
-        ".admin-shell .admin-panel { border-radius: 28px; box-shadow: 0 18px 44px rgba(55, 35, 10, 0.12); }",
-    ],
-    "Important application routes": [
-        "app.get(\"/\", (req, res) => res.render(\"page/home\"));",
-        "app.get(\"/login\", (req, res) => res.render(\"page/login_admin\", { error: null, username: \"\" }));",
-        "app.get(\"/admin\", requireAdmin, async (req, res) => { /* dashboard */ });",
-        "app.post(\"/admin/booking/new_booking\", requireAdmin, async (req, res) => { /* create */ });",
-    ],
-}
-
-DEFAULT_CODE_EXAMPLES = [
-    "// Typical HotelOps protected route pattern",
-    "app.get(\"/admin/example\", requireAdmin, async (req, res) => {",
-    "  try {",
-    "    const records = await Model.find().sort({ _id: -1 }).lean();",
-    "    return res.render(\"page/template\", {",
-    "      adminUser: req.session?.adminUser,",
-    "      records,",
-    "    });",
-    "  } catch (err) {",
-    "    console.error(\"Route error:\", err);",
-    "    return res.status(500).send(\"Failed to load page.\");",
-    "  }",
-    "});",
+SOURCE_SNIPPETS = [
+    ("app.js", 1, 16),
+    ("app.js", 26, 43),
+    ("app.js", 52, 59),
+    ("app.js", 61, 74),
+    ("app.js", 111, 146),
+    ("app.js", 156, 183),
+    ("app.js", 190, 205),
+    ("app.js", 208, 226),
+    ("app.js", 228, 241),
+    ("app.js", 248, 269),
+    ("app.js", 276, 286),
+    ("app.js", 296, 318),
+    ("app.js", 320, 356),
+    ("models/AdminUsers.js", 1, 20),
+    ("models/Room.js", 1, 23),
+    ("models/Booking.js", 1, 28),
+    ("views/layout/boilerplate.ejs", 1, 35),
+    ("views/layout/boilerplate_admin.ejs", 1, 31),
+    ("views/includes/navbar.ejs", 1, 20),
+    ("views/includes/navbarAdmin.ejs", 1, 26),
+    ("views/page/new_booking.ejs", 22, 61),
+    ("public/home.css", 1, 30),
+    ("public/home.css", 37, 67),
+    ("public/home.css", 115, 140),
 ]
 
+TOPIC_SNIPPET_REFS = {
+    "Project overview and purpose": [("app.js", 1, 16), ("views/page/home.ejs", 1, 18)],
+    "Project objectives": [("app.js", 156, 183), ("app.js", 208, 226)],
+    "Technology stack summary": [("package.json", 1, 24), ("app.js", 1, 9)],
+    "Repository structure": [("app.js", 1, 12), ("models/Booking.js", 1, 28)],
+    "Application entry point": [("app.js", 1, 16), ("app.js", 57, 59)],
+    "Database connection": [("app.js", 14, 24), ("models/Room.js", 1, 23)],
+    "Express middleware pipeline": [("app.js", 26, 43), ("views/layout/boilerplate.ejs", 21, 35)],
+    "Session management": [("app.js", 32, 43), ("app.js", 52, 55)],
+    "Admin authentication concept": [("app.js", 111, 146), ("models/AdminUsers.js", 1, 20)],
+    "Authorization middleware": [("app.js", 52, 55), ("app.js", 156, 183)],
+    "Public home page": [("app.js", 284, 356), ("views/page/home.ejs", 1, 35)],
+    "Generated hotel image endpoint": [("app.js", 61, 107)],
+    "Contact page": [("app.js", 360, 362), ("views/page/contact.ejs", 1, 45)],
+    "Admin dashboard route": [("app.js", 156, 183), ("views/page/adminPage.ejs", 1, 35)],
+    "Room inventory model": [("models/Room.js", 1, 23), ("app.js", 156, 176)],
+    "Booking model": [("models/Booking.js", 1, 28), ("app.js", 190, 201)],
+    "Admin user model": [("models/AdminUsers.js", 1, 20), ("app.js", 127, 146)],
+    "Booking list page": [("app.js", 190, 201), ("views/page/bookings.ejs", 1, 50)],
+    "Create booking page": [("app.js", 204, 226), ("views/page/new_booking.ejs", 22, 61)],
+    "Room locking during booking": [("app.js", 222, 241), ("models/Room.js", 3, 23)],
+    "Checkout flow": [("app.js", 248, 269), ("views/page/bookings.ejs", 40, 90)],
+    "Logout behavior": [("app.js", 276, 280), ("views/includes/navbarAdmin.ejs", 13, 23)],
+    "EJS layout strategy": [("views/layout/boilerplate.ejs", 1, 35), ("views/layout/boilerplate_admin.ejs", 1, 31)],
+    "Navigation includes": [("views/includes/navbar.ejs", 1, 20), ("views/includes/navbarAdmin.ejs", 1, 26)],
+    "Admin page user experience": [("views/page/adminPage.ejs", 1, 70), ("public/home.css", 115, 140)],
+    "Bookings page user experience": [("views/page/bookings.ejs", 1, 90), ("app.js", 190, 201)],
+    "New booking form experience": [("views/page/new_booking.ejs", 22, 61), ("app.js", 208, 220)],
+    "Styling system": [("public/home.css", 1, 30), ("public/home.css", 115, 140)],
+    "Bootstrap and icon usage": [("views/layout/boilerplate.ejs", 8, 23), ("views/includes/navbarAdmin.ejs", 15, 22)],
+    "Demo data seeding": [("app.js", 14, 24), ("models/Booking.js", 1, 28)],
+    "Important application routes": [("app.js", 111, 146), ("app.js", 156, 205)],
+    "Request and response lifecycle": [("app.js", 30, 43), ("app.js", 178, 183)],
+    "Data flow for login": [("app.js", 116, 146), ("views/page/login_admin.ejs", 1, 70)],
+    "Data flow for dashboard metrics": [("app.js", 156, 183), ("models/Room.js", 1, 23)],
+    "Data flow for creating bookings": [("app.js", 208, 241), ("views/page/new_booking.ejs", 24, 61)],
+    "Data flow for checkout": [("app.js", 248, 269), ("views/page/bookings.ejs", 40, 90)],
+    "Error handling approach": [("app.js", 120, 153), ("app.js", 242, 273)],
+    "Security observations": [("app.js", 32, 43), ("app.js", 52, 55), ("app.js", 116, 146)],
+    "Performance considerations": [("app.js", 156, 161), ("app.js", 190, 192)],
+    "Maintainability considerations": [("views/layout/boilerplate.ejs", 27, 35), ("views/includes/navbarAdmin.ejs", 1, 26)],
+    "Development setup": [("package.json", 1, 24), ("app.js", 11, 16)],
+    "MongoDB setup guidance": [("app.js", 14, 24), ("models/AdminUsers.js", 1, 20)],
+    "Presentation talking points": [("app.js", 284, 356), ("app.js", 156, 183)],
+    "Code walkthrough order": [("package.json", 1, 24), ("app.js", 1, 43)],
+    "Strengths of the project": [("app.js", 156, 183), ("views/page/adminPage.ejs", 23, 70)],
+    "Known limitations": [("models/Booking.js", 17, 22), ("models/AdminUsers.js", 10, 14)],
+    "Future enhancement ideas": [("app.js", 208, 241), ("models/Booking.js", 1, 28)],
+    "Suggested database improvements": [("models/Room.js", 1, 23), ("models/Booking.js", 1, 28)],
+    "Suggested UI improvements": [("views/page/new_booking.ejs", 22, 61), ("public/home.css", 37, 67)],
+    "Suggested deployment plan": [("app.js", 14, 16), ("app.js", 32, 43)],
+    "Testing strategy": [("package.json", 5, 9), ("app.js", 1, 16)],
+    "Project conclusion": [("app.js", 1, 16), ("app.js", 156, 183)],
+    "Appendix: final summary": [("app.js", 1, 16), ("app.js", 208, 241)],
+}
+
+
+def read_code_excerpt(file_path: str, start: int, end: int, max_lines: int = 18) -> list[str]:
+    path = ROOT / file_path
+    if not path.exists():
+        return [f"// Missing source file: {file_path}"]
+    source_lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
+    safe_start = max(1, start)
+    safe_end = min(len(source_lines), end, safe_start + max_lines - 1)
+    excerpt = [f"// {file_path} (lines {safe_start}-{safe_end})"]
+    excerpt.extend(source_lines[safe_start - 1 : safe_end])
+    return excerpt
 
 
 def technical_details_for(title: str, page_number: int) -> list[str]:
@@ -695,20 +670,17 @@ def technical_details_for(title: str, page_number: int) -> list[str]:
     ]
 
 
-def code_examples_for(title: str) -> list[str]:
-    base = CODE_EXAMPLES.get(title, DEFAULT_CODE_EXAMPLES)
-    if len(base) >= 10:
-        return base
-    supporting = [
-        "// Supporting implementation pattern used in HotelOps",
-        "const payload = { adminUser: req.session?.adminUser };",
-        "const query = Model.find().sort({ _id: -1 }).lean();",
-        "const records = await query;",
-        "return res.render(\"page/template\", { ...payload, records });",
-        "// Errors are handled by route-level try/catch blocks.",
-        "// Production improvement: move this logic into a route module or service.",
-    ]
-    return base + supporting[: max(0, 11 - len(base))]
+def code_examples_for(title: str, page_number: int | None = None) -> list[str]:
+    refs = TOPIC_SNIPPET_REFS.get(title)
+    if not refs:
+        index = 0 if page_number is None else (page_number - 4) % len(SOURCE_SNIPPETS)
+        refs = [SOURCE_SNIPPETS[index], SOURCE_SNIPPETS[(index + 7) % len(SOURCE_SNIPPETS)]]
+    code_lines: list[str] = []
+    for ref in refs[:2]:
+        if code_lines:
+            code_lines.append("")
+        code_lines.extend(read_code_excerpt(*ref))
+    return code_lines[:32]
 
 
 def escape_pdf(text: str) -> str:
@@ -754,7 +726,7 @@ class SimplePdf:
         self.current_y = TOP_Y
         lines: list[tuple[str, int, str]] = []
         lines.append((f"{page_number}. {title}", 17, "bold"))
-        lines.append(("Functionality overview (40%)", 11, "bold"))
+        lines.append(("Functionality overview", 11, "bold"))
         functionality_points = body[:4] + technical_details_for(title, page_number)[:2]
         for idx, paragraph in enumerate(functionality_points, 1):
             wrapped = textwrap.wrap(paragraph, width=88)
@@ -762,8 +734,8 @@ class SimplePdf:
             for line_index, line in enumerate(wrapped):
                 lines.append(((prefix if line_index == 0 else "   ") + line, 8, "regular"))
         lines.append(("", 4, "regular"))
-        lines.append(("Technical code reference (60%)", 11, "bold"))
-        code_lines = code_examples_for(title)
+        lines.append(("Project source code reference", 11, "bold"))
+        code_lines = code_examples_for(title, page_number)
         for code_line in code_lines:
             for line in textwrap.wrap(code_line, width=82, replace_whitespace=False, drop_whitespace=False):
                 lines.append(("  " + line, 8, "code"))
@@ -839,13 +811,13 @@ def create_markdown(total_pages: int) -> str:
     lines.append("")
     for i, (title, body) in enumerate(PAGES, start_page):
         lines.extend([f"## Page {i}: {title}", ""])
-        lines.append("### Functionality overview (40%)")
+        lines.append("### Functionality overview")
         for paragraph in body[:4] + technical_details_for(title, i)[:2]:
             lines.append(f"- {paragraph}")
         lines.append("")
-        lines.append("### Technical code reference (60%)")
+        lines.append("### Project source code reference")
         lines.append("```js")
-        lines.extend(code_examples_for(title))
+        lines.extend(code_examples_for(title, i))
         lines.append("```")
         lines.append("")
         lines.append("### Code-to-functionality mapping")
