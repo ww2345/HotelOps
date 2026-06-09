@@ -1,0 +1,4129 @@
+%PDF-1.4
+%
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R 18 0 R 20 0 R 22 0 R 24 0 R 26 0 R 28 0 R 30 0 R 32 0 R 34 0 R 36 0 R 38 0 R 40 0 R 42 0 R 44 0 R 46 0 R 48 0 R 50 0 R 52 0 R 54 0 R 56 0 R 58 0 R 60 0 R 62 0 R 64 0 R 66 0 R 68 0 R 70 0 R 72 0 R 74 0 R 76 0 R 78 0 R 80 0 R 82 0 R 84 0 R 86 0 R 88 0 R 90 0 R 92 0 R 94 0 R 96 0 R 98 0 R 100 0 R 102 0 R 104 0 R 106 0 R 108 0 R 110 0 R 112 0 R 114 0 R 116 0 R] /Count 56 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 1068 >>
+stream
+q
+BT
+/F2 32 Tf
+58 770 Td (HotelOps) Tj
+-58 -770 Td
+/F2 22 Tf
+58 724 Td (Hotel Management Demo) Tj
+-58 -724 Td
+/F1 18 Tf
+58 693 Td (Project Explanation PDF) Tj
+-58 -693 Td
+/F1 10 Tf
+58 667 Td () Tj
+-58 -667 Td
+/F1 12 Tf
+58 653 Td (Prepared for a 50-60 page project explanation with index) Tj
+-58 -653 Td
+/F1 11 Tf
+58 636 Td (Technology stack: Node.js, Express, EJS, ejs-mate, MongoDB, Mongoose, express-session, Bootstrap, and Font Awesome) Tj
+-58 -636 Td
+/F1 11 Tf
+58 621 Td (Default server: http://127.0.0.1:9999/) Tj
+-58 -621 Td
+/F1 11 Tf
+58 606 Td (Default database: mongodb://127.0.0.1:27017/hotel_management) Tj
+-58 -606 Td
+/F1 8 Tf
+58 591 Td () Tj
+-58 -591 Td
+/F2 14 Tf
+58 580 Td (Document scope) Tj
+-58 -580 Td
+/F1 10 Tf
+58 560 Td (This PDF explains the purpose, architecture, files, routes, models,) Tj
+-58 -560 Td
+/F1 10 Tf
+58 546 Td (templates, data flow, admin workflow, limitations, and future) Tj
+-58 -546 Td
+/F1 10 Tf
+58 532 Td (enhancements of the HotelOps project.) Tj
+-58 -532 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 1 of 56) Tj
+ET
+Q
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 2013 >>
+stream
+q
+BT
+/F2 22 Tf
+58 770 Td (Index / Table of Contents) Tj
+-58 -770 Td
+/F1 8 Tf
+58 739 Td () Tj
+-58 -739 Td
+/F1 10 Tf
+58 728 Td (Page 04  Project overview and purpose) Tj
+-58 -728 Td
+/F1 10 Tf
+58 714 Td (Page 05  Project objectives) Tj
+-58 -714 Td
+/F1 10 Tf
+58 700 Td (Page 06  Technology stack summary) Tj
+-58 -700 Td
+/F1 10 Tf
+58 686 Td (Page 07  Repository structure) Tj
+-58 -686 Td
+/F1 10 Tf
+58 672 Td (Page 08  Application entry point) Tj
+-58 -672 Td
+/F1 10 Tf
+58 658 Td (Page 09  Database connection) Tj
+-58 -658 Td
+/F1 10 Tf
+58 644 Td (Page 10  Express middleware pipeline) Tj
+-58 -644 Td
+/F1 10 Tf
+58 630 Td (Page 11  Session management) Tj
+-58 -630 Td
+/F1 10 Tf
+58 616 Td (Page 12  Admin authentication concept) Tj
+-58 -616 Td
+/F1 10 Tf
+58 602 Td (Page 13  Authorization middleware) Tj
+-58 -602 Td
+/F1 10 Tf
+58 588 Td (Page 14  Public home page) Tj
+-58 -588 Td
+/F1 10 Tf
+58 574 Td (Page 15  Generated hotel image endpoint) Tj
+-58 -574 Td
+/F1 10 Tf
+58 560 Td (Page 16  Contact page) Tj
+-58 -560 Td
+/F1 10 Tf
+58 546 Td (Page 17  Admin dashboard route) Tj
+-58 -546 Td
+/F1 10 Tf
+58 532 Td (Page 18  Room inventory model) Tj
+-58 -532 Td
+/F1 10 Tf
+58 518 Td (Page 19  Booking model) Tj
+-58 -518 Td
+/F1 10 Tf
+58 504 Td (Page 20  Admin user model) Tj
+-58 -504 Td
+/F1 10 Tf
+58 490 Td (Page 21  Booking list page) Tj
+-58 -490 Td
+/F1 10 Tf
+58 476 Td (Page 22  Create booking page) Tj
+-58 -476 Td
+/F1 10 Tf
+58 462 Td (Page 23  Room locking during booking) Tj
+-58 -462 Td
+/F1 10 Tf
+58 448 Td (Page 24  Checkout flow) Tj
+-58 -448 Td
+/F1 10 Tf
+58 434 Td (Page 25  Logout behavior) Tj
+-58 -434 Td
+/F1 10 Tf
+58 420 Td (Page 26  EJS layout strategy) Tj
+-58 -420 Td
+/F1 10 Tf
+58 406 Td (Page 27  Navigation includes) Tj
+-58 -406 Td
+/F1 10 Tf
+58 392 Td (Page 28  Admin page user experience) Tj
+-58 -392 Td
+/F1 10 Tf
+58 378 Td (Page 29  Bookings page user experience) Tj
+-58 -378 Td
+/F1 10 Tf
+58 364 Td (Page 30  New booking form experience) Tj
+-58 -364 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 2 of 56) Tj
+ET
+Q
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 2005 >>
+stream
+q
+BT
+/F2 22 Tf
+58 770 Td (Index / Table of Contents) Tj
+-58 -770 Td
+/F1 8 Tf
+58 739 Td () Tj
+-58 -739 Td
+/F1 10 Tf
+58 728 Td (Page 31  Styling system) Tj
+-58 -728 Td
+/F1 10 Tf
+58 714 Td (Page 32  Bootstrap and icon usage) Tj
+-58 -714 Td
+/F1 10 Tf
+58 700 Td (Page 33  Demo data seeding) Tj
+-58 -700 Td
+/F1 10 Tf
+58 686 Td (Page 34  Important application routes) Tj
+-58 -686 Td
+/F1 10 Tf
+58 672 Td (Page 35  Request and response lifecycle) Tj
+-58 -672 Td
+/F1 10 Tf
+58 658 Td (Page 36  Data flow for login) Tj
+-58 -658 Td
+/F1 10 Tf
+58 644 Td (Page 37  Data flow for dashboard metrics) Tj
+-58 -644 Td
+/F1 10 Tf
+58 630 Td (Page 38  Data flow for creating bookings) Tj
+-58 -630 Td
+/F1 10 Tf
+58 616 Td (Page 39  Data flow for checkout) Tj
+-58 -616 Td
+/F1 10 Tf
+58 602 Td (Page 40  Error handling approach) Tj
+-58 -602 Td
+/F1 10 Tf
+58 588 Td (Page 41  Security observations) Tj
+-58 -588 Td
+/F1 10 Tf
+58 574 Td (Page 42  Performance considerations) Tj
+-58 -574 Td
+/F1 10 Tf
+58 560 Td (Page 43  Maintainability considerations) Tj
+-58 -560 Td
+/F1 10 Tf
+58 546 Td (Page 44  Development setup) Tj
+-58 -546 Td
+/F1 10 Tf
+58 532 Td (Page 45  MongoDB setup guidance) Tj
+-58 -532 Td
+/F1 10 Tf
+58 518 Td (Page 46  Presentation talking points) Tj
+-58 -518 Td
+/F1 10 Tf
+58 504 Td (Page 47  Code walkthrough order) Tj
+-58 -504 Td
+/F1 10 Tf
+58 490 Td (Page 48  Strengths of the project) Tj
+-58 -490 Td
+/F1 10 Tf
+58 476 Td (Page 49  Known limitations) Tj
+-58 -476 Td
+/F1 10 Tf
+58 462 Td (Page 50  Future enhancement ideas) Tj
+-58 -462 Td
+/F1 10 Tf
+58 448 Td (Page 51  Suggested database improvements) Tj
+-58 -448 Td
+/F1 10 Tf
+58 434 Td (Page 52  Suggested UI improvements) Tj
+-58 -434 Td
+/F1 10 Tf
+58 420 Td (Page 53  Suggested deployment plan) Tj
+-58 -420 Td
+/F1 10 Tf
+58 406 Td (Page 54  Testing strategy) Tj
+-58 -406 Td
+/F1 10 Tf
+58 392 Td (Page 55  Project conclusion) Tj
+-58 -392 Td
+/F1 10 Tf
+58 378 Td (Page 56  Appendix: final summary) Tj
+-58 -378 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 3 of 56) Tj
+ET
+Q
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 1903 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (4. Project overview and purpose) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. HotelOps is a hotel management demonstration web application focused on public) Tj
+-58 -733 Td
+/F1 10 Tf
+58 719 Td (   hotel presentation and a protected administration workflow.) Tj
+-58 -719 Td
+/F1 5 Tf
+58 705 Td () Tj
+-58 -705 Td
+/F1 10 Tf
+58 698 Td (2. The project shows how a small Express application can combine server routes,) Tj
+-58 -698 Td
+/F1 10 Tf
+58 684 Td (   reusable EJS layouts, MongoDB-backed data, session login, and polished Bootstrap) Tj
+-58 -684 Td
+/F1 10 Tf
+58 670 Td (   styling.) Tj
+-58 -670 Td
+/F1 5 Tf
+58 656 Td () Tj
+-58 -656 Td
+/F1 10 Tf
+58 649 Td (3. It is suitable for college presentation, portfolio review, and as a foundation for) Tj
+-58 -649 Td
+/F1 10 Tf
+58 635 Td (   adding production-ready hotel operations features.) Tj
+-58 -635 Td
+/F1 5 Tf
+58 621 Td () Tj
+-58 -621 Td
+/F1 10 Tf
+58 614 Td (4. The main business goal is to help staff view room inventory, understand occupancy,) Tj
+-58 -614 Td
+/F1 10 Tf
+58 600 Td (   create bookings, and release rooms at checkout.) Tj
+-58 -600 Td
+/F1 5 Tf
+58 586 Td () Tj
+-58 -586 Td
+/F1 10 Tf
+58 579 Td (5. The public side introduces the hotel, while the private side acts like a front-) Tj
+-58 -579 Td
+/F1 10 Tf
+58 565 Td (   desk control panel for operational tasks.) Tj
+-58 -565 Td
+/F1 5 Tf
+58 551 Td () Tj
+-58 -551 Td
+/F2 12 Tf
+58 544 Td (Key explanation note:) Tj
+-58 -544 Td
+/F1 10 Tf
+58 527 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -527 Td
+/F1 10 Tf
+58 513 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -513 Td
+/F1 10 Tf
+58 499 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -499 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 4 of 56) Tj
+ET
+Q
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 1572 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (5. Project objectives) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. Provide a clear landing page for customers and visitors.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. Allow only authenticated administrators to access internal room and booking) Tj
+-58 -712 Td
+/F1 10 Tf
+58 698 Td (   information.) Tj
+-58 -698 Td
+/F1 5 Tf
+58 684 Td () Tj
+-58 -684 Td
+/F1 10 Tf
+58 677 Td (3. Persist rooms, bookings, and administrator users in MongoDB instead of storing) Tj
+-58 -677 Td
+/F1 10 Tf
+58 663 Td (   them only in memory.) Tj
+-58 -663 Td
+/F1 5 Tf
+58 649 Td () Tj
+-58 -649 Td
+/F1 10 Tf
+58 642 Td (4. Demonstrate basic create and update operations for bookings and rooms through) Tj
+-58 -642 Td
+/F1 10 Tf
+58 628 Td (   Mongoose models.) Tj
+-58 -628 Td
+/F1 5 Tf
+58 614 Td () Tj
+-58 -614 Td
+/F1 10 Tf
+58 607 Td (5. Use a simple folder structure so new developers can quickly identify routes,) Tj
+-58 -607 Td
+/F1 10 Tf
+58 593 Td (   views, models, and public assets.) Tj
+-58 -593 Td
+/F1 5 Tf
+58 579 Td () Tj
+-58 -579 Td
+/F2 12 Tf
+58 572 Td (Key explanation note:) Tj
+-58 -572 Td
+/F1 10 Tf
+58 555 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -541 Td
+/F1 10 Tf
+58 527 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -527 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 5 of 56) Tj
+ET
+Q
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 1650 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (6. Technology stack summary) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The application uses Node.js, Express, EJS, ejs-mate, MongoDB, Mongoose, express-) Tj
+-58 -733 Td
+/F1 10 Tf
+58 719 Td (   session, Bootstrap, and Font Awesome.) Tj
+-58 -719 Td
+/F1 5 Tf
+58 705 Td () Tj
+-58 -705 Td
+/F1 10 Tf
+58 698 Td (2. Express handles HTTP routing and middleware setup.) Tj
+-58 -698 Td
+/F1 5 Tf
+58 684 Td () Tj
+-58 -684 Td
+/F1 10 Tf
+58 677 Td (3. EJS renders dynamic HTML pages, while ejs-mate provides layout inheritance so) Tj
+-58 -677 Td
+/F1 10 Tf
+58 663 Td (   common page structure is not repeated.) Tj
+-58 -663 Td
+/F1 5 Tf
+58 649 Td () Tj
+-58 -649 Td
+/F1 10 Tf
+58 642 Td (4. Mongoose defines schemas for administrator users, rooms, and bookings and connects) Tj
+-58 -642 Td
+/F1 10 Tf
+58 628 Td (   those models to MongoDB collections.) Tj
+-58 -628 Td
+/F1 5 Tf
+58 614 Td () Tj
+-58 -614 Td
+/F1 10 Tf
+58 607 Td (5. Bootstrap and custom CSS combine to create responsive pages, navigation bars,) Tj
+-58 -607 Td
+/F1 10 Tf
+58 593 Td (   dashboards, cards, tables, and forms.) Tj
+-58 -593 Td
+/F1 5 Tf
+58 579 Td () Tj
+-58 -579 Td
+/F2 12 Tf
+58 572 Td (Key explanation note:) Tj
+-58 -572 Td
+/F1 10 Tf
+58 555 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -541 Td
+/F1 10 Tf
+58 527 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -527 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 6 of 56) Tj
+ET
+Q
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Length 1686 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (7. Repository structure) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. app.js is the central application file where middleware, database connection,) Tj
+-58 -733 Td
+/F1 10 Tf
+58 719 Td (   routes, authentication, and seeding behavior are configured.) Tj
+-58 -719 Td
+/F1 5 Tf
+58 705 Td () Tj
+-58 -705 Td
+/F1 10 Tf
+58 698 Td (2. models/ contains AdminUsers.js, Room.js, and Booking.js, which define the database) Tj
+-58 -698 Td
+/F1 10 Tf
+58 684 Td (   shape for core entities.) Tj
+-58 -684 Td
+/F1 5 Tf
+58 670 Td () Tj
+-58 -670 Td
+/F1 10 Tf
+58 663 Td (3. views/ contains layout files, reusable navbar includes, and page-specific EJS) Tj
+-58 -663 Td
+/F1 10 Tf
+58 649 Td (   templates.) Tj
+-58 -649 Td
+/F1 5 Tf
+58 635 Td () Tj
+-58 -635 Td
+/F1 10 Tf
+58 628 Td (4. public/home.css contains the custom visual language used by the public pages and) Tj
+-58 -628 Td
+/F1 10 Tf
+58 614 Td (   the admin dashboard.) Tj
+-58 -614 Td
+/F1 5 Tf
+58 600 Td () Tj
+-58 -600 Td
+/F1 10 Tf
+58 593 Td (5. README.md explains setup, dependencies, default URLs, routes, and demo data) Tj
+-58 -593 Td
+/F1 10 Tf
+58 579 Td (   behavior.) Tj
+-58 -579 Td
+/F1 5 Tf
+58 565 Td () Tj
+-58 -565 Td
+/F2 12 Tf
+58 558 Td (Key explanation note:) Tj
+-58 -558 Td
+/F1 10 Tf
+58 541 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -541 Td
+/F1 10 Tf
+58 527 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -527 Td
+/F1 10 Tf
+58 513 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -513 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 7 of 56) Tj
+ET
+Q
+endstream
+endobj
+18 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 17 0 R >>
+endobj
+19 0 obj
+<< /Length 1627 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (8. Application entry point) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The application starts from app.js and creates an Express server instance.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. The configured port is 9999, so local users open the app through) Tj
+-58 -712 Td
+/F1 10 Tf
+58 698 Td (   http://127.0.0.1:9999/.) Tj
+-58 -698 Td
+/F1 5 Tf
+58 684 Td () Tj
+-58 -684 Td
+/F1 10 Tf
+58 677 Td (3. The server configures EJS, static file serving, URL-encoded form parsing, and) Tj
+-58 -677 Td
+/F1 10 Tf
+58 663 Td (   sessions before defining route handlers.) Tj
+-58 -663 Td
+/F1 5 Tf
+58 649 Td () Tj
+-58 -649 Td
+/F1 10 Tf
+58 642 Td (4. Database connection startup happens near the beginning so Mongoose models can be) Tj
+-58 -642 Td
+/F1 10 Tf
+58 628 Td (   used by the routes.) Tj
+-58 -628 Td
+/F1 5 Tf
+58 614 Td () Tj
+-58 -614 Td
+/F1 10 Tf
+58 607 Td (5. The entry point is intentionally compact, making it easy to explain during a) Tj
+-58 -607 Td
+/F1 10 Tf
+58 593 Td (   project viva or classroom demonstration.) Tj
+-58 -593 Td
+/F1 5 Tf
+58 579 Td () Tj
+-58 -579 Td
+/F2 12 Tf
+58 572 Td (Key explanation note:) Tj
+-58 -572 Td
+/F1 10 Tf
+58 555 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -541 Td
+/F1 10 Tf
+58 527 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -527 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 8 of 56) Tj
+ET
+Q
+endstream
+endobj
+20 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 19 0 R >>
+endobj
+21 0 obj
+<< /Length 1681 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (9. Database connection) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. HotelOps connects to MongoDB using the local connection string) Tj
+-58 -733 Td
+/F1 10 Tf
+58 719 Td (   mongodb://127.0.0.1:27017/hotel_management.) Tj
+-58 -719 Td
+/F1 5 Tf
+58 705 Td () Tj
+-58 -705 Td
+/F1 10 Tf
+58 698 Td (2. Mongoose provides the connection layer and converts JavaScript objects into) Tj
+-58 -698 Td
+/F1 10 Tf
+58 684 Td (   MongoDB documents.) Tj
+-58 -684 Td
+/F1 5 Tf
+58 670 Td () Tj
+-58 -670 Td
+/F1 10 Tf
+58 663 Td (3. A successful connection message is printed in the terminal so the developer can) Tj
+-58 -663 Td
+/F1 10 Tf
+58 649 Td (   confirm that the database is reachable.) Tj
+-58 -649 Td
+/F1 5 Tf
+58 635 Td () Tj
+-58 -635 Td
+/F1 10 Tf
+58 628 Td (4. If MongoDB is not running, the catch block logs the error, which helps diagnose) Tj
+-58 -628 Td
+/F1 10 Tf
+58 614 Td (   local setup issues.) Tj
+-58 -614 Td
+/F1 5 Tf
+58 600 Td () Tj
+-58 -600 Td
+/F1 10 Tf
+58 593 Td (5. For deployment, the hard-coded connection string should be replaced with an) Tj
+-58 -593 Td
+/F1 10 Tf
+58 579 Td (   environment variable.) Tj
+-58 -579 Td
+/F1 5 Tf
+58 565 Td () Tj
+-58 -565 Td
+/F2 12 Tf
+58 558 Td (Key explanation note:) Tj
+-58 -558 Td
+/F1 10 Tf
+58 541 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -541 Td
+/F1 10 Tf
+58 527 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -527 Td
+/F1 10 Tf
+58 513 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -513 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 9 of 56) Tj
+ET
+Q
+endstream
+endobj
+22 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 21 0 R >>
+endobj
+23 0 obj
+<< /Length 1561 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (10. Express middleware pipeline) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. express.urlencoded parses submitted HTML forms and exposes fields through) Tj
+-58 -733 Td
+/F1 10 Tf
+58 719 Td (   req.body.) Tj
+-58 -719 Td
+/F1 5 Tf
+58 705 Td () Tj
+-58 -705 Td
+/F1 10 Tf
+58 698 Td (2. express.static serves CSS files and other assets from the public directory.) Tj
+-58 -698 Td
+/F1 5 Tf
+58 684 Td () Tj
+-58 -684 Td
+/F1 10 Tf
+58 677 Td (3. express-session stores the logged-in admin state between browser requests.) Tj
+-58 -677 Td
+/F1 5 Tf
+58 663 Td () Tj
+-58 -663 Td
+/F1 10 Tf
+58 656 Td (4. The app also imports method-override, which can be used when forms need to) Tj
+-58 -656 Td
+/F1 10 Tf
+58 642 Td (   simulate HTTP verbs beyond GET and POST.) Tj
+-58 -642 Td
+/F1 5 Tf
+58 628 Td () Tj
+-58 -628 Td
+/F1 10 Tf
+58 621 Td (5. Middleware order matters because routes depend on parsed form bodies, static) Tj
+-58 -621 Td
+/F1 10 Tf
+58 607 Td (   assets, and session data being available.) Tj
+-58 -607 Td
+/F1 5 Tf
+58 593 Td () Tj
+-58 -593 Td
+/F2 12 Tf
+58 586 Td (Key explanation note:) Tj
+-58 -586 Td
+/F1 10 Tf
+58 569 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -541 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 10 of 56) Tj
+ET
+Q
+endstream
+endobj
+24 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 23 0 R >>
+endobj
+25 0 obj
+<< /Length 1585 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (11. Session management) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The session middleware uses a secret, resave disabled, and saveUninitialized) Tj
+-58 -733 Td
+/F1 10 Tf
+58 719 Td (   disabled.) Tj
+-58 -719 Td
+/F1 5 Tf
+58 705 Td () Tj
+-58 -705 Td
+/F1 10 Tf
+58 698 Td (2. The cookie is marked httpOnly so client-side JavaScript cannot read it directly.) Tj
+-58 -698 Td
+/F1 5 Tf
+58 684 Td () Tj
+-58 -684 Td
+/F1 10 Tf
+58 677 Td (3. sameSite lax provides baseline cross-site request protection for normal navigation) Tj
+-58 -677 Td
+/F1 10 Tf
+58 663 Td (   flows.) Tj
+-58 -663 Td
+/F1 5 Tf
+58 649 Td () Tj
+-58 -649 Td
+/F1 10 Tf
+58 642 Td (4. The six-hour max age keeps the admin logged in for a practical work shift while) Tj
+-58 -642 Td
+/F1 10 Tf
+58 628 Td (   still expiring inactive sessions.) Tj
+-58 -628 Td
+/F1 5 Tf
+58 614 Td () Tj
+-58 -614 Td
+/F1 10 Tf
+58 607 Td (5. In production, SESSION_SECRET should always be provided through environment) Tj
+-58 -607 Td
+/F1 10 Tf
+58 593 Td (   configuration.) Tj
+-58 -593 Td
+/F1 5 Tf
+58 579 Td () Tj
+-58 -579 Td
+/F2 12 Tf
+58 572 Td (Key explanation note:) Tj
+-58 -572 Td
+/F1 10 Tf
+58 555 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -541 Td
+/F1 10 Tf
+58 527 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -527 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 11 of 56) Tj
+ET
+Q
+endstream
+endobj
+26 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 25 0 R >>
+endobj
+27 0 obj
+<< /Length 1567 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (12. Admin authentication concept) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The login form posts a username and password to the server.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. The server searches the admin user collection for the submitted username.) Tj
+-58 -712 Td
+/F1 5 Tf
+58 698 Td () Tj
+-58 -698 Td
+/F1 10 Tf
+58 691 Td (3. If the user is missing or the password does not match, the login template is) Tj
+-58 -691 Td
+/F1 10 Tf
+58 677 Td (   rendered again with an error message.) Tj
+-58 -677 Td
+/F1 5 Tf
+58 663 Td () Tj
+-58 -663 Td
+/F1 10 Tf
+58 656 Td (4. When credentials are valid, req.session.isAdmin is set to true and the admin) Tj
+-58 -656 Td
+/F1 10 Tf
+58 642 Td (   username is stored for display.) Tj
+-58 -642 Td
+/F1 5 Tf
+58 628 Td () Tj
+-58 -628 Td
+/F1 10 Tf
+58 621 Td (5. This project demonstrates authentication flow, although password hashing should be) Tj
+-58 -621 Td
+/F1 10 Tf
+58 607 Td (   added before real production use.) Tj
+-58 -607 Td
+/F1 5 Tf
+58 593 Td () Tj
+-58 -593 Td
+/F2 12 Tf
+58 586 Td (Key explanation note:) Tj
+-58 -586 Td
+/F1 10 Tf
+58 569 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -541 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 12 of 56) Tj
+ET
+Q
+endstream
+endobj
+28 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 27 0 R >>
+endobj
+29 0 obj
+<< /Length 1469 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (13. Authorization middleware) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The requireAdmin middleware checks whether the current request has an active) Tj
+-58 -733 Td
+/F1 10 Tf
+58 719 Td (   administrator session.) Tj
+-58 -719 Td
+/F1 5 Tf
+58 705 Td () Tj
+-58 -705 Td
+/F1 10 Tf
+58 698 Td (2. Protected routes call requireAdmin before their controller logic runs.) Tj
+-58 -698 Td
+/F1 5 Tf
+58 684 Td () Tj
+-58 -684 Td
+/F1 10 Tf
+58 677 Td (3. If the user is authenticated, next\(\) allows the request to continue.) Tj
+-58 -677 Td
+/F1 5 Tf
+58 663 Td () Tj
+-58 -663 Td
+/F1 10 Tf
+58 656 Td (4. If the user is not authenticated, the browser is redirected to /login.) Tj
+-58 -656 Td
+/F1 5 Tf
+58 642 Td () Tj
+-58 -642 Td
+/F1 10 Tf
+58 635 Td (5. This keeps dashboard pages, booking pages, booking creation, and checkout) Tj
+-58 -635 Td
+/F1 10 Tf
+58 621 Td (   operations behind the admin gate.) Tj
+-58 -621 Td
+/F1 5 Tf
+58 607 Td () Tj
+-58 -607 Td
+/F2 12 Tf
+58 600 Td (Key explanation note:) Tj
+-58 -600 Td
+/F1 10 Tf
+58 583 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -583 Td
+/F1 10 Tf
+58 569 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -555 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 13 of 56) Tj
+ET
+Q
+endstream
+endobj
+30 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 29 0 R >>
+endobj
+31 0 obj
+<< /Length 1562 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (14. Public home page) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The home route renders the main public landing page.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. The home page presents the hotel brand, feature highlights, room-oriented) Tj
+-58 -712 Td
+/F1 10 Tf
+58 698 Td (   messaging, and call-to-action navigation.) Tj
+-58 -698 Td
+/F1 5 Tf
+58 684 Td () Tj
+-58 -684 Td
+/F1 10 Tf
+58 677 Td (3. It uses the shared public layout and navbar include for consistent structure.) Tj
+-58 -677 Td
+/F1 5 Tf
+58 663 Td () Tj
+-58 -663 Td
+/F1 10 Tf
+58 656 Td (4. Styling from public/home.css creates the modern visual theme with gradients,) Tj
+-58 -656 Td
+/F1 10 Tf
+58 642 Td (   cards, rounded panels, and responsive spacing.) Tj
+-58 -642 Td
+/F1 5 Tf
+58 628 Td () Tj
+-58 -628 Td
+/F1 10 Tf
+58 621 Td (5. This page is the visitor-facing part of the system and introduces HotelOps before) Tj
+-58 -621 Td
+/F1 10 Tf
+58 607 Td (   any admin login is required.) Tj
+-58 -607 Td
+/F1 5 Tf
+58 593 Td () Tj
+-58 -593 Td
+/F2 12 Tf
+58 586 Td (Key explanation note:) Tj
+-58 -586 Td
+/F1 10 Tf
+58 569 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -541 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 14 of 56) Tj
+ET
+Q
+endstream
+endobj
+32 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 31 0 R >>
+endobj
+33 0 obj
+<< /Length 1606 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (15. Generated hotel image endpoint) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The /assets/hotel-image.svg endpoint generates an SVG image directly from server) Tj
+-58 -733 Td
+/F1 10 Tf
+58 719 Td (   code.) Tj
+-58 -719 Td
+/F1 5 Tf
+58 705 Td () Tj
+-58 -705 Td
+/F1 10 Tf
+58 698 Td (2. Query parameters can influence the seed, width, and height while still being) Tj
+-58 -698 Td
+/F1 10 Tf
+58 684 Td (   clamped to reasonable values.) Tj
+-58 -684 Td
+/F1 5 Tf
+58 670 Td () Tj
+-58 -670 Td
+/F1 10 Tf
+58 663 Td (3. A small hash function changes gradient hues based on the seed value.) Tj
+-58 -663 Td
+/F1 5 Tf
+58 649 Td () Tj
+-58 -649 Td
+/F1 10 Tf
+58 642 Td (4. The response is sent as image/svg+xml and can be displayed by the browser like a) Tj
+-58 -642 Td
+/F1 10 Tf
+58 628 Td (   normal image asset.) Tj
+-58 -628 Td
+/F1 5 Tf
+58 614 Td () Tj
+-58 -614 Td
+/F1 10 Tf
+58 607 Td (5. This approach avoids requiring a separate image file while still giving the) Tj
+-58 -607 Td
+/F1 10 Tf
+58 593 Td (   project a branded visual asset.) Tj
+-58 -593 Td
+/F1 5 Tf
+58 579 Td () Tj
+-58 -579 Td
+/F2 12 Tf
+58 572 Td (Key explanation note:) Tj
+-58 -572 Td
+/F1 10 Tf
+58 555 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -541 Td
+/F1 10 Tf
+58 527 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -527 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 15 of 56) Tj
+ET
+Q
+endstream
+endobj
+34 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 33 0 R >>
+endobj
+35 0 obj
+<< /Length 1629 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (16. Contact page) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The contact route renders a visitor-facing page for communication details and) Tj
+-58 -733 Td
+/F1 10 Tf
+58 719 Td (   inquiries.) Tj
+-58 -719 Td
+/F1 5 Tf
+58 705 Td () Tj
+-58 -705 Td
+/F1 10 Tf
+58 698 Td (2. It fits into the public side of the site and uses the same visual system as the) Tj
+-58 -698 Td
+/F1 10 Tf
+58 684 Td (   home page.) Tj
+-58 -684 Td
+/F1 5 Tf
+58 670 Td () Tj
+-58 -670 Td
+/F1 10 Tf
+58 663 Td (3. A contact page is useful in a hotel project because guest communication is a) Tj
+-58 -663 Td
+/F1 10 Tf
+58 649 Td (   natural part of hotel operations.) Tj
+-58 -649 Td
+/F1 5 Tf
+58 635 Td () Tj
+-58 -635 Td
+/F1 10 Tf
+58 628 Td (4. The current version focuses on presentation rather than submitting messages to a) Tj
+-58 -628 Td
+/F1 10 Tf
+58 614 Td (   database.) Tj
+-58 -614 Td
+/F1 5 Tf
+58 600 Td () Tj
+-58 -600 Td
+/F1 10 Tf
+58 593 Td (5. Future enhancements could add enquiry forms, email delivery, or a CRM-style) Tj
+-58 -593 Td
+/F1 10 Tf
+58 579 Td (   message inbox.) Tj
+-58 -579 Td
+/F1 5 Tf
+58 565 Td () Tj
+-58 -565 Td
+/F2 12 Tf
+58 558 Td (Key explanation note:) Tj
+-58 -558 Td
+/F1 10 Tf
+58 541 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -541 Td
+/F1 10 Tf
+58 527 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -527 Td
+/F1 10 Tf
+58 513 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -513 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 16 of 56) Tj
+ET
+Q
+endstream
+endobj
+36 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 35 0 R >>
+endobj
+37 0 obj
+<< /Length 1668 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (17. Admin dashboard route) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The /admin route is protected by requireAdmin and loads room and booking data from) Tj
+-58 -733 Td
+/F1 10 Tf
+58 719 Td (   MongoDB.) Tj
+-58 -719 Td
+/F1 5 Tf
+58 705 Td () Tj
+-58 -705 Td
+/F1 10 Tf
+58 698 Td (2. It fetches rooms sorted by room number and finds distinct booked room numbers from) Tj
+-58 -698 Td
+/F1 10 Tf
+58 684 Td (   the bookings collection.) Tj
+-58 -684 Td
+/F1 5 Tf
+58 670 Td () Tj
+-58 -670 Td
+/F1 10 Tf
+58 663 Td (3. The route calculates total rooms, occupied rooms, available rooms, and occupancy) Tj
+-58 -663 Td
+/F1 10 Tf
+58 649 Td (   percentage.) Tj
+-58 -649 Td
+/F1 5 Tf
+58 635 Td () Tj
+-58 -635 Td
+/F1 10 Tf
+58 628 Td (4. These statistics are passed to the admin dashboard template and shown as key) Tj
+-58 -628 Td
+/F1 10 Tf
+58 614 Td (   performance indicators.) Tj
+-58 -614 Td
+/F1 5 Tf
+58 600 Td () Tj
+-58 -600 Td
+/F1 10 Tf
+58 593 Td (5. The dashboard gives hotel staff a fast operational summary without needing to) Tj
+-58 -593 Td
+/F1 10 Tf
+58 579 Td (   inspect the database directly.) Tj
+-58 -579 Td
+/F1 5 Tf
+58 565 Td () Tj
+-58 -565 Td
+/F2 12 Tf
+58 558 Td (Key explanation note:) Tj
+-58 -558 Td
+/F1 10 Tf
+58 541 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -541 Td
+/F1 10 Tf
+58 527 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -527 Td
+/F1 10 Tf
+58 513 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -513 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 17 of 56) Tj
+ET
+Q
+endstream
+endobj
+38 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 37 0 R >>
+endobj
+39 0 obj
+<< /Length 1474 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (18. Room inventory model) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The Room model stores a room number, status, and price.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. The room number is numeric and required, making sorting and matching) Tj
+-58 -712 Td
+/F1 10 Tf
+58 698 Td (   straightforward.) Tj
+-58 -698 Td
+/F1 5 Tf
+58 684 Td () Tj
+-58 -684 Td
+/F1 10 Tf
+58 677 Td (3. The status field shows whether the room is available or occupied.) Tj
+-58 -677 Td
+/F1 5 Tf
+58 663 Td () Tj
+-58 -663 Td
+/F1 10 Tf
+58 656 Td (4. The price field supports displaying a nightly rate or operational charge for each) Tj
+-58 -656 Td
+/F1 10 Tf
+58 642 Td (   room.) Tj
+-58 -642 Td
+/F1 5 Tf
+58 628 Td () Tj
+-58 -628 Td
+/F1 10 Tf
+58 621 Td (5. This model is small but captures the core room attributes needed for a basic hotel) Tj
+-58 -621 Td
+/F1 10 Tf
+58 607 Td (   dashboard.) Tj
+-58 -607 Td
+/F1 5 Tf
+58 593 Td () Tj
+-58 -593 Td
+/F2 12 Tf
+58 586 Td (Key explanation note:) Tj
+-58 -586 Td
+/F1 10 Tf
+58 569 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -541 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 18 of 56) Tj
+ET
+Q
+endstream
+endobj
+40 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 39 0 R >>
+endobj
+41 0 obj
+<< /Length 1551 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (19. Booking model) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The Booking model stores guest name, room number, contact number, check-in, and) Tj
+-58 -733 Td
+/F1 10 Tf
+58 719 Td (   checkout values.) Tj
+-58 -719 Td
+/F1 5 Tf
+58 705 Td () Tj
+-58 -705 Td
+/F1 10 Tf
+58 698 Td (2. The name, room, and contact number fields are required to ensure the booking has) Tj
+-58 -698 Td
+/F1 10 Tf
+58 684 Td (   essential guest information.) Tj
+-58 -684 Td
+/F1 5 Tf
+58 670 Td () Tj
+-58 -670 Td
+/F1 10 Tf
+58 663 Td (3. Check-in and checkout are currently stored as strings, which works for display but) Tj
+-58 -663 Td
+/F1 10 Tf
+58 649 Td (   should become Date fields for advanced reporting.) Tj
+-58 -649 Td
+/F1 5 Tf
+58 635 Td () Tj
+-58 -635 Td
+/F1 10 Tf
+58 628 Td (4. Bookings provide the link between guests and room occupancy.) Tj
+-58 -628 Td
+/F1 5 Tf
+58 614 Td () Tj
+-58 -614 Td
+/F1 10 Tf
+58 607 Td (5. The admin booking list uses these documents to show recent stay records.) Tj
+-58 -607 Td
+/F1 5 Tf
+58 593 Td () Tj
+-58 -593 Td
+/F2 12 Tf
+58 586 Td (Key explanation note:) Tj
+-58 -586 Td
+/F1 10 Tf
+58 569 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -541 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 19 of 56) Tj
+ET
+Q
+endstream
+endobj
+42 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 41 0 R >>
+endobj
+43 0 obj
+<< /Length 1444 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (20. Admin user model) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The AdminUsers model defines a username and password for administrators.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. The username is required, unique, and capped at twenty-five characters.) Tj
+-58 -712 Td
+/F1 5 Tf
+58 698 Td () Tj
+-58 -698 Td
+/F1 10 Tf
+58 691 Td (3. The password is required and has a minimum length rule.) Tj
+-58 -691 Td
+/F1 5 Tf
+58 677 Td () Tj
+-58 -677 Td
+/F1 10 Tf
+58 670 Td (4. The model binds to a named MongoDB collection so login records can be managed) Tj
+-58 -670 Td
+/F1 10 Tf
+58 656 Td (   separately from rooms and bookings.) Tj
+-58 -656 Td
+/F1 5 Tf
+58 642 Td () Tj
+-58 -642 Td
+/F1 10 Tf
+58 635 Td (5. For production readiness, password hashing and account lockout policies should be) Tj
+-58 -635 Td
+/F1 10 Tf
+58 621 Td (   added.) Tj
+-58 -621 Td
+/F1 5 Tf
+58 607 Td () Tj
+-58 -607 Td
+/F2 12 Tf
+58 600 Td (Key explanation note:) Tj
+-58 -600 Td
+/F1 10 Tf
+58 583 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -583 Td
+/F1 10 Tf
+58 569 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -555 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 20 of 56) Tj
+ET
+Q
+endstream
+endobj
+44 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 43 0 R >>
+endobj
+45 0 obj
+<< /Length 1522 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (21. Booking list page) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The /admin/bookings route is protected and lists recent booking documents.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. The query sorts records by descending identifier and limits the output to fifty) Tj
+-58 -712 Td
+/F1 10 Tf
+58 698 Td (   rows.) Tj
+-58 -698 Td
+/F1 5 Tf
+58 684 Td () Tj
+-58 -684 Td
+/F1 10 Tf
+58 677 Td (3. The template shows guest names, contact numbers, room numbers, check-in values,) Tj
+-58 -677 Td
+/F1 10 Tf
+58 663 Td (   checkout values, and actions.) Tj
+-58 -663 Td
+/F1 5 Tf
+58 649 Td () Tj
+-58 -649 Td
+/F1 10 Tf
+58 642 Td (4. A limited list keeps the page readable and avoids overwhelming the interface) Tj
+-58 -642 Td
+/F1 10 Tf
+58 628 Td (   during demonstrations.) Tj
+-58 -628 Td
+/F1 5 Tf
+58 614 Td () Tj
+-58 -614 Td
+/F1 10 Tf
+58 607 Td (5. Pagination or filtering can be added later for larger hotel datasets.) Tj
+-58 -607 Td
+/F1 5 Tf
+58 593 Td () Tj
+-58 -593 Td
+/F2 12 Tf
+58 586 Td (Key explanation note:) Tj
+-58 -586 Td
+/F1 10 Tf
+58 569 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -541 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 21 of 56) Tj
+ET
+Q
+endstream
+endobj
+46 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 45 0 R >>
+endobj
+47 0 obj
+<< /Length 1523 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (22. Create booking page) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The /admin/booking/new_booking route renders a protected booking form.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. Administrators can enter guest name, contact number, room number, check-in) Tj
+-58 -712 Td
+/F1 10 Tf
+58 698 Td (   date/time, and checkout date/time.) Tj
+-58 -698 Td
+/F1 5 Tf
+58 684 Td () Tj
+-58 -684 Td
+/F1 10 Tf
+58 677 Td (3. The post handler validates required fields before attempting to write to the) Tj
+-58 -677 Td
+/F1 10 Tf
+58 663 Td (   database.) Tj
+-58 -663 Td
+/F1 5 Tf
+58 649 Td () Tj
+-58 -649 Td
+/F1 10 Tf
+58 642 Td (4. Room availability is checked and updated before the booking record is inserted.) Tj
+-58 -642 Td
+/F1 5 Tf
+58 628 Td () Tj
+-58 -628 Td
+/F1 10 Tf
+58 621 Td (5. This sequence reduces the chance that two bookings are created for the same) Tj
+-58 -621 Td
+/F1 10 Tf
+58 607 Td (   available room.) Tj
+-58 -607 Td
+/F1 5 Tf
+58 593 Td () Tj
+-58 -593 Td
+/F2 12 Tf
+58 586 Td (Key explanation note:) Tj
+-58 -586 Td
+/F1 10 Tf
+58 569 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -541 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 22 of 56) Tj
+ET
+Q
+endstream
+endobj
+48 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 47 0 R >>
+endobj
+49 0 obj
+<< /Length 1675 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (23. Room locking during booking) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The booking creation flow uses findOneAndUpdate to find an available room and mark) Tj
+-58 -733 Td
+/F1 10 Tf
+58 719 Td (   it occupied.) Tj
+-58 -719 Td
+/F1 5 Tf
+58 705 Td () Tj
+-58 -705 Td
+/F1 10 Tf
+58 698 Td (2. The query matches the selected room number and checks availability with a case-) Tj
+-58 -698 Td
+/F1 10 Tf
+58 684 Td (   insensitive regular expression.) Tj
+-58 -684 Td
+/F1 5 Tf
+58 670 Td () Tj
+-58 -670 Td
+/F1 10 Tf
+58 663 Td (3. If no matching available room is found, the route distinguishes between an invalid) Tj
+-58 -663 Td
+/F1 10 Tf
+58 649 Td (   room and an unavailable room.) Tj
+-58 -649 Td
+/F1 5 Tf
+58 635 Td () Tj
+-58 -635 Td
+/F1 10 Tf
+58 628 Td (4. If booking insertion fails after the room update, the code sets the room back to) Tj
+-58 -628 Td
+/F1 10 Tf
+58 614 Td (   available.) Tj
+-58 -614 Td
+/F1 5 Tf
+58 600 Td () Tj
+-58 -600 Td
+/F1 10 Tf
+58 593 Td (5. This rollback behavior helps preserve consistency between room status and booking) Tj
+-58 -593 Td
+/F1 10 Tf
+58 579 Td (   records.) Tj
+-58 -579 Td
+/F1 5 Tf
+58 565 Td () Tj
+-58 -565 Td
+/F2 12 Tf
+58 558 Td (Key explanation note:) Tj
+-58 -558 Td
+/F1 10 Tf
+58 541 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -541 Td
+/F1 10 Tf
+58 527 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -527 Td
+/F1 10 Tf
+58 513 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -513 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 23 of 56) Tj
+ET
+Q
+endstream
+endobj
+50 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 49 0 R >>
+endobj
+51 0 obj
+<< /Length 1445 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (24. Checkout flow) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The checkout handler receives a booking id from the URL.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. It validates the id as a MongoDB ObjectId before querying the booking collection.) Tj
+-58 -712 Td
+/F1 5 Tf
+58 698 Td () Tj
+-58 -698 Td
+/F1 10 Tf
+58 691 Td (3. After finding the booking, it extracts the room number and marks that room) Tj
+-58 -691 Td
+/F1 10 Tf
+58 677 Td (   available again.) Tj
+-58 -677 Td
+/F1 5 Tf
+58 663 Td () Tj
+-58 -663 Td
+/F1 10 Tf
+58 656 Td (4. The booking is then deleted so the active booking list no longer shows that stay.) Tj
+-58 -656 Td
+/F1 5 Tf
+58 642 Td () Tj
+-58 -642 Td
+/F1 10 Tf
+58 635 Td (5. This creates a simple operational cycle: book room, occupy room, checkout guest,) Tj
+-58 -635 Td
+/F1 10 Tf
+58 621 Td (   release room.) Tj
+-58 -621 Td
+/F1 5 Tf
+58 607 Td () Tj
+-58 -607 Td
+/F2 12 Tf
+58 600 Td (Key explanation note:) Tj
+-58 -600 Td
+/F1 10 Tf
+58 583 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -583 Td
+/F1 10 Tf
+58 569 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -555 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 24 of 56) Tj
+ET
+Q
+endstream
+endobj
+52 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 51 0 R >>
+endobj
+53 0 obj
+<< /Length 1504 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (25. Logout behavior) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The logout route destroys the current session.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. If session destruction fails, the error is logged but the user is still redirected) Tj
+-58 -712 Td
+/F1 10 Tf
+58 698 Td (   to the login page.) Tj
+-58 -698 Td
+/F1 5 Tf
+58 684 Td () Tj
+-58 -684 Td
+/F1 10 Tf
+58 677 Td (3. Logging out clears the administrator gate state and prevents further protected) Tj
+-58 -677 Td
+/F1 10 Tf
+58 663 Td (   page access from the same session.) Tj
+-58 -663 Td
+/F1 5 Tf
+58 649 Td () Tj
+-58 -649 Td
+/F1 10 Tf
+58 642 Td (4. A logout link in the admin navigation makes this action easy to find.) Tj
+-58 -642 Td
+/F1 5 Tf
+58 628 Td () Tj
+-58 -628 Td
+/F1 10 Tf
+58 621 Td (5. This completes the basic authentication lifecycle of login, protected browsing,) Tj
+-58 -621 Td
+/F1 10 Tf
+58 607 Td (   and logout.) Tj
+-58 -607 Td
+/F1 5 Tf
+58 593 Td () Tj
+-58 -593 Td
+/F2 12 Tf
+58 586 Td (Key explanation note:) Tj
+-58 -586 Td
+/F1 10 Tf
+58 569 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -541 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 25 of 56) Tj
+ET
+Q
+endstream
+endobj
+54 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 53 0 R >>
+endobj
+55 0 obj
+<< /Length 1509 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (26. EJS layout strategy) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The application uses ejs-mate to support reusable layouts.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. boilerplate.ejs provides the public page skeleton, while boilerplate_admin.ejs) Tj
+-58 -712 Td
+/F1 10 Tf
+58 698 Td (   supports authenticated admin pages.) Tj
+-58 -698 Td
+/F1 5 Tf
+58 684 Td () Tj
+-58 -684 Td
+/F1 10 Tf
+58 677 Td (3. Reusable layout files keep head tags, CSS links, scripts, and common wrappers) Tj
+-58 -677 Td
+/F1 10 Tf
+58 663 Td (   consistent.) Tj
+-58 -663 Td
+/F1 5 Tf
+58 649 Td () Tj
+-58 -649 Td
+/F1 10 Tf
+58 642 Td (4. Page templates focus on page-specific content instead of repeating the same HTML) Tj
+-58 -642 Td
+/F1 10 Tf
+58 628 Td (   shell.) Tj
+-58 -628 Td
+/F1 5 Tf
+58 614 Td () Tj
+-58 -614 Td
+/F1 10 Tf
+58 607 Td (5. This strategy makes the codebase easier to maintain as the project grows.) Tj
+-58 -607 Td
+/F1 5 Tf
+58 593 Td () Tj
+-58 -593 Td
+/F2 12 Tf
+58 586 Td (Key explanation note:) Tj
+-58 -586 Td
+/F1 10 Tf
+58 569 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -541 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 26 of 56) Tj
+ET
+Q
+endstream
+endobj
+56 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 55 0 R >>
+endobj
+57 0 obj
+<< /Length 1504 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (27. Navigation includes) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The includes folder stores navbar templates for public and admin pages.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. The public navbar provides navigation to home, contact, and login-related) Tj
+-58 -712 Td
+/F1 10 Tf
+58 698 Td (   destinations.) Tj
+-58 -698 Td
+/F1 5 Tf
+58 684 Td () Tj
+-58 -684 Td
+/F1 10 Tf
+58 677 Td (3. The admin navbar provides dashboard, booking, add-booking, and logout-oriented) Tj
+-58 -677 Td
+/F1 10 Tf
+58 663 Td (   controls.) Tj
+-58 -663 Td
+/F1 5 Tf
+58 649 Td () Tj
+-58 -649 Td
+/F1 10 Tf
+58 642 Td (4. Keeping navigation in includes avoids duplicate markup across pages.) Tj
+-58 -642 Td
+/F1 5 Tf
+58 628 Td () Tj
+-58 -628 Td
+/F1 10 Tf
+58 621 Td (5. When a menu item needs to change, the developer can update one include instead of) Tj
+-58 -621 Td
+/F1 10 Tf
+58 607 Td (   many page templates.) Tj
+-58 -607 Td
+/F1 5 Tf
+58 593 Td () Tj
+-58 -593 Td
+/F2 12 Tf
+58 586 Td (Key explanation note:) Tj
+-58 -586 Td
+/F1 10 Tf
+58 569 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -541 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 27 of 56) Tj
+ET
+Q
+endstream
+endobj
+58 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 57 0 R >>
+endobj
+59 0 obj
+<< /Length 1513 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (28. Admin page user experience) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The dashboard presents high-level room statistics first, then detailed room) Tj
+-58 -733 Td
+/F1 10 Tf
+58 719 Td (   information.) Tj
+-58 -719 Td
+/F1 5 Tf
+58 705 Td () Tj
+-58 -705 Td
+/F1 10 Tf
+58 698 Td (2. Key performance indicators help the administrator understand occupancy at a) Tj
+-58 -698 Td
+/F1 10 Tf
+58 684 Td (   glance.) Tj
+-58 -684 Td
+/F1 5 Tf
+58 670 Td () Tj
+-58 -670 Td
+/F1 10 Tf
+58 663 Td (3. Room cards and tables visually separate available and occupied rooms.) Tj
+-58 -663 Td
+/F1 5 Tf
+58 649 Td () Tj
+-58 -649 Td
+/F1 10 Tf
+58 642 Td (4. The interface uses badges, icons, spacing, and contrast to make status information) Tj
+-58 -642 Td
+/F1 10 Tf
+58 628 Td (   easy to scan.) Tj
+-58 -628 Td
+/F1 5 Tf
+58 614 Td () Tj
+-58 -614 Td
+/F1 10 Tf
+58 607 Td (5. This page is designed for fast front-desk awareness rather than complex analytics.) Tj
+-58 -607 Td
+/F1 5 Tf
+58 593 Td () Tj
+-58 -593 Td
+/F2 12 Tf
+58 586 Td (Key explanation note:) Tj
+-58 -586 Td
+/F1 10 Tf
+58 569 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -541 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 28 of 56) Tj
+ET
+Q
+endstream
+endobj
+60 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 59 0 R >>
+endobj
+61 0 obj
+<< /Length 1413 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (29. Bookings page user experience) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The bookings page focuses on recent guest stays and checkout actions.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. It uses a table format because booking data is naturally structured into columns.) Tj
+-58 -712 Td
+/F1 5 Tf
+58 698 Td () Tj
+-58 -698 Td
+/F1 10 Tf
+58 691 Td (3. Clear action buttons help staff perform checkout without navigating through many) Tj
+-58 -691 Td
+/F1 10 Tf
+58 677 Td (   screens.) Tj
+-58 -677 Td
+/F1 5 Tf
+58 663 Td () Tj
+-58 -663 Td
+/F1 10 Tf
+58 656 Td (4. Empty-state messaging can guide the admin when there are no current bookings.) Tj
+-58 -656 Td
+/F1 5 Tf
+58 642 Td () Tj
+-58 -642 Td
+/F1 10 Tf
+58 635 Td (5. The page supports the daily workflow of reviewing who is staying in which room.) Tj
+-58 -635 Td
+/F1 5 Tf
+58 621 Td () Tj
+-58 -621 Td
+/F2 12 Tf
+58 614 Td (Key explanation note:) Tj
+-58 -614 Td
+/F1 10 Tf
+58 597 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -597 Td
+/F1 10 Tf
+58 583 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -583 Td
+/F1 10 Tf
+58 569 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -569 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 29 of 56) Tj
+ET
+Q
+endstream
+endobj
+62 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 61 0 R >>
+endobj
+63 0 obj
+<< /Length 1447 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (30. New booking form experience) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The new booking page keeps data entry fields simple and direct.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. Each required field maps closely to a property on the Booking model.) Tj
+-58 -712 Td
+/F1 5 Tf
+58 698 Td () Tj
+-58 -698 Td
+/F1 10 Tf
+58 691 Td (3. The room number entry connects the guest booking to a room document.) Tj
+-58 -691 Td
+/F1 5 Tf
+58 677 Td () Tj
+-58 -677 Td
+/F1 10 Tf
+58 670 Td (4. Server-side validation protects the application even if a browser bypasses HTML) Tj
+-58 -670 Td
+/F1 10 Tf
+58 656 Td (   validation.) Tj
+-58 -656 Td
+/F1 5 Tf
+58 642 Td () Tj
+-58 -642 Td
+/F1 10 Tf
+58 635 Td (5. Future form improvements could include room dropdowns, date pickers, and automatic) Tj
+-58 -635 Td
+/F1 10 Tf
+58 621 Td (   price calculation.) Tj
+-58 -621 Td
+/F1 5 Tf
+58 607 Td () Tj
+-58 -607 Td
+/F2 12 Tf
+58 600 Td (Key explanation note:) Tj
+-58 -600 Td
+/F1 10 Tf
+58 583 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -583 Td
+/F1 10 Tf
+58 569 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -555 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 30 of 56) Tj
+ET
+Q
+endstream
+endobj
+64 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 63 0 R >>
+endobj
+65 0 obj
+<< /Length 1501 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (31. Styling system) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The public/home.css file defines the visual language for the project.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. It uses CSS variables for repeated colors, surfaces, shadows, muted text, and) Tj
+-58 -712 Td
+/F1 10 Tf
+58 698 Td (   brand gold tones.) Tj
+-58 -698 Td
+/F1 5 Tf
+58 684 Td () Tj
+-58 -684 Td
+/F1 10 Tf
+58 677 Td (3. Large rounded containers and soft shadows create a hospitality-inspired) Tj
+-58 -677 Td
+/F1 10 Tf
+58 663 Td (   presentation.) Tj
+-58 -663 Td
+/F1 5 Tf
+58 649 Td () Tj
+-58 -649 Td
+/F1 10 Tf
+58 642 Td (4. Responsive widths and grid-based sections help the pages adapt to different screen) Tj
+-58 -642 Td
+/F1 10 Tf
+58 628 Td (   sizes.) Tj
+-58 -628 Td
+/F1 5 Tf
+58 614 Td () Tj
+-58 -614 Td
+/F1 10 Tf
+58 607 Td (5. The stylesheet supports both public marketing pages and admin operational pages.) Tj
+-58 -607 Td
+/F1 5 Tf
+58 593 Td () Tj
+-58 -593 Td
+/F2 12 Tf
+58 586 Td (Key explanation note:) Tj
+-58 -586 Td
+/F1 10 Tf
+58 569 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -541 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 31 of 56) Tj
+ET
+Q
+endstream
+endobj
+66 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 65 0 R >>
+endobj
+67 0 obj
+<< /Length 1634 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (32. Bootstrap and icon usage) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. Bootstrap is used for layout utilities, responsive grids, buttons, forms, tables,) Tj
+-58 -733 Td
+/F1 10 Tf
+58 719 Td (   and spacing helpers.) Tj
+-58 -719 Td
+/F1 5 Tf
+58 705 Td () Tj
+-58 -705 Td
+/F1 10 Tf
+58 698 Td (2. Font Awesome icons improve visual recognition for navigation, statistics, and) Tj
+-58 -698 Td
+/F1 10 Tf
+58 684 Td (   actions.) Tj
+-58 -684 Td
+/F1 5 Tf
+58 670 Td () Tj
+-58 -670 Td
+/F1 10 Tf
+58 663 Td (3. Using a framework reduces the amount of custom CSS needed for common interface) Tj
+-58 -663 Td
+/F1 10 Tf
+58 649 Td (   patterns.) Tj
+-58 -649 Td
+/F1 5 Tf
+58 635 Td () Tj
+-58 -635 Td
+/F1 10 Tf
+58 628 Td (4. Custom CSS then adds brand-specific polish beyond the default Bootstrap) Tj
+-58 -628 Td
+/F1 10 Tf
+58 614 Td (   appearance.) Tj
+-58 -614 Td
+/F1 5 Tf
+58 600 Td () Tj
+-58 -600 Td
+/F1 10 Tf
+58 593 Td (5. This combination is practical for student projects because it balances speed and) Tj
+-58 -593 Td
+/F1 10 Tf
+58 579 Td (   presentation quality.) Tj
+-58 -579 Td
+/F1 5 Tf
+58 565 Td () Tj
+-58 -565 Td
+/F2 12 Tf
+58 558 Td (Key explanation note:) Tj
+-58 -558 Td
+/F1 10 Tf
+58 541 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -541 Td
+/F1 10 Tf
+58 527 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -527 Td
+/F1 10 Tf
+58 513 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -513 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 32 of 56) Tj
+ET
+Q
+endstream
+endobj
+68 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 67 0 R >>
+endobj
+69 0 obj
+<< /Length 1567 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (33. Demo data seeding) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The README explains that demo rooms and bookings are seeded once when collections) Tj
+-58 -733 Td
+/F1 10 Tf
+58 719 Td (   are empty.) Tj
+-58 -719 Td
+/F1 5 Tf
+58 705 Td () Tj
+-58 -705 Td
+/F1 10 Tf
+58 698 Td (2. Seeding ensures the admin dashboard can show meaningful information during) Tj
+-58 -698 Td
+/F1 10 Tf
+58 684 Td (   demonstrations.) Tj
+-58 -684 Td
+/F1 5 Tf
+58 670 Td () Tj
+-58 -670 Td
+/F1 10 Tf
+58 663 Td (3. Persistent data means the dashboard reflects MongoDB content instead of temporary) Tj
+-58 -663 Td
+/F1 10 Tf
+58 649 Td (   in-memory arrays.) Tj
+-58 -649 Td
+/F1 5 Tf
+58 635 Td () Tj
+-58 -635 Td
+/F1 10 Tf
+58 628 Td (4. One-time seeding avoids replacing data every time the server restarts.) Tj
+-58 -628 Td
+/F1 5 Tf
+58 614 Td () Tj
+-58 -614 Td
+/F1 10 Tf
+58 607 Td (5. For production, seeding should be separated into a dedicated script or migration) Tj
+-58 -607 Td
+/F1 10 Tf
+58 593 Td (   workflow.) Tj
+-58 -593 Td
+/F1 5 Tf
+58 579 Td () Tj
+-58 -579 Td
+/F2 12 Tf
+58 572 Td (Key explanation note:) Tj
+-58 -572 Td
+/F1 10 Tf
+58 555 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -541 Td
+/F1 10 Tf
+58 527 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -527 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 33 of 56) Tj
+ET
+Q
+endstream
+endobj
+70 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 69 0 R >>
+endobj
+71 0 obj
+<< /Length 1531 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (34. Important application routes) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. Important routes include /, /contact, /login, /admin, /admin/bookings,) Tj
+-58 -733 Td
+/F1 10 Tf
+58 719 Td (   /admin/booking/new_booking, /logout, and /assets/hotel-image.svg.) Tj
+-58 -719 Td
+/F1 5 Tf
+58 705 Td () Tj
+-58 -705 Td
+/F1 10 Tf
+58 698 Td (2. GET routes render pages or assets, while POST routes process form submissions and) Tj
+-58 -698 Td
+/F1 10 Tf
+58 684 Td (   state-changing actions.) Tj
+-58 -684 Td
+/F1 5 Tf
+58 670 Td () Tj
+-58 -670 Td
+/F1 10 Tf
+58 663 Td (3. Admin routes use the requireAdmin middleware to protect sensitive operations.) Tj
+-58 -663 Td
+/F1 5 Tf
+58 649 Td () Tj
+-58 -649 Td
+/F1 10 Tf
+58 642 Td (4. Public routes remain accessible so visitors can browse the site before login.) Tj
+-58 -642 Td
+/F1 5 Tf
+58 628 Td () Tj
+-58 -628 Td
+/F1 10 Tf
+58 621 Td (5. This route design clearly separates visitor presentation from staff operations.) Tj
+-58 -621 Td
+/F1 5 Tf
+58 607 Td () Tj
+-58 -607 Td
+/F2 12 Tf
+58 600 Td (Key explanation note:) Tj
+-58 -600 Td
+/F1 10 Tf
+58 583 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -583 Td
+/F1 10 Tf
+58 569 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -555 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 34 of 56) Tj
+ET
+Q
+endstream
+endobj
+72 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 71 0 R >>
+endobj
+73 0 obj
+<< /Length 1504 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (35. Request and response lifecycle) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. A browser request enters the Express middleware pipeline first.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. Static files may be served immediately if the URL matches a file in public.) Tj
+-58 -712 Td
+/F1 5 Tf
+58 698 Td () Tj
+-58 -698 Td
+/F1 10 Tf
+58 691 Td (3. Page routes run controller logic, query models if needed, and render EJS) Tj
+-58 -691 Td
+/F1 10 Tf
+58 677 Td (   templates.) Tj
+-58 -677 Td
+/F1 5 Tf
+58 663 Td () Tj
+-58 -663 Td
+/F1 10 Tf
+58 656 Td (4. Form submissions are parsed by express.urlencoded and then validated by route) Tj
+-58 -656 Td
+/F1 10 Tf
+58 642 Td (   handlers.) Tj
+-58 -642 Td
+/F1 5 Tf
+58 628 Td () Tj
+-58 -628 Td
+/F1 10 Tf
+58 621 Td (5. Responses may be rendered pages, redirects, SVG assets, or error messages) Tj
+-58 -621 Td
+/F1 10 Tf
+58 607 Td (   depending on the route.) Tj
+-58 -607 Td
+/F1 5 Tf
+58 593 Td () Tj
+-58 -593 Td
+/F2 12 Tf
+58 586 Td (Key explanation note:) Tj
+-58 -586 Td
+/F1 10 Tf
+58 569 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -541 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 35 of 56) Tj
+ET
+Q
+endstream
+endobj
+74 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 73 0 R >>
+endobj
+75 0 obj
+<< /Length 1436 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (36. Data flow for login) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The admin enters credentials on the login page.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. The browser sends a POST request to /login with username and password fields.) Tj
+-58 -712 Td
+/F1 5 Tf
+58 698 Td () Tj
+-58 -698 Td
+/F1 10 Tf
+58 691 Td (3. The server queries the admin user model by username and compares the submitted) Tj
+-58 -691 Td
+/F1 10 Tf
+58 677 Td (   password.) Tj
+-58 -677 Td
+/F1 5 Tf
+58 663 Td () Tj
+-58 -663 Td
+/F1 10 Tf
+58 656 Td (4. On success, session values are written and the browser is redirected to /admin.) Tj
+-58 -656 Td
+/F1 5 Tf
+58 642 Td () Tj
+-58 -642 Td
+/F1 10 Tf
+58 635 Td (5. On failure, the same login page is re-rendered with a clear validation or) Tj
+-58 -635 Td
+/F1 10 Tf
+58 621 Td (   authentication message.) Tj
+-58 -621 Td
+/F1 5 Tf
+58 607 Td () Tj
+-58 -607 Td
+/F2 12 Tf
+58 600 Td (Key explanation note:) Tj
+-58 -600 Td
+/F1 10 Tf
+58 583 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -583 Td
+/F1 10 Tf
+58 569 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -555 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 36 of 56) Tj
+ET
+Q
+endstream
+endobj
+76 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 75 0 R >>
+endobj
+77 0 obj
+<< /Length 1351 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (37. Data flow for dashboard metrics) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The dashboard route queries all rooms and distinct room numbers from bookings.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. It converts booking room values to numbers and filters out invalid results.) Tj
+-58 -712 Td
+/F1 5 Tf
+58 698 Td () Tj
+-58 -698 Td
+/F1 10 Tf
+58 691 Td (3. A Set is used so duplicate booked room entries do not inflate occupied room count.) Tj
+-58 -691 Td
+/F1 5 Tf
+58 677 Td () Tj
+-58 -677 Td
+/F1 10 Tf
+58 670 Td (4. Available rooms are calculated as total rooms minus occupied rooms.) Tj
+-58 -670 Td
+/F1 5 Tf
+58 656 Td () Tj
+-58 -656 Td
+/F1 10 Tf
+58 649 Td (5. Occupancy percentage is rounded to provide a simple dashboard metric.) Tj
+-58 -649 Td
+/F1 5 Tf
+58 635 Td () Tj
+-58 -635 Td
+/F2 12 Tf
+58 628 Td (Key explanation note:) Tj
+-58 -628 Td
+/F1 10 Tf
+58 611 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -611 Td
+/F1 10 Tf
+58 597 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -597 Td
+/F1 10 Tf
+58 583 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -583 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 37 of 56) Tj
+ET
+Q
+endstream
+endobj
+78 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 77 0 R >>
+endobj
+79 0 obj
+<< /Length 1331 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (38. Data flow for creating bookings) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The admin submits guest and stay details from the booking form.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. The server validates each required value before writing to MongoDB.) Tj
+-58 -712 Td
+/F1 5 Tf
+58 698 Td () Tj
+-58 -698 Td
+/F1 10 Tf
+58 691 Td (3. A room is atomically changed from available to occupied through Mongoose.) Tj
+-58 -691 Td
+/F1 5 Tf
+58 677 Td () Tj
+-58 -677 Td
+/F1 10 Tf
+58 670 Td (4. A booking document is created after the room is successfully locked.) Tj
+-58 -670 Td
+/F1 5 Tf
+58 656 Td () Tj
+-58 -656 Td
+/F1 10 Tf
+58 649 Td (5. The browser is redirected to the booking list so the new record can be reviewed.) Tj
+-58 -649 Td
+/F1 5 Tf
+58 635 Td () Tj
+-58 -635 Td
+/F2 12 Tf
+58 628 Td (Key explanation note:) Tj
+-58 -628 Td
+/F1 10 Tf
+58 611 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -611 Td
+/F1 10 Tf
+58 597 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -597 Td
+/F1 10 Tf
+58 583 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -583 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 38 of 56) Tj
+ET
+Q
+endstream
+endobj
+80 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 79 0 R >>
+endobj
+81 0 obj
+<< /Length 1282 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (39. Data flow for checkout) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The admin clicks a checkout action on a booking record.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. The server validates the booking identifier and loads the booking document.) Tj
+-58 -712 Td
+/F1 5 Tf
+58 698 Td () Tj
+-58 -698 Td
+/F1 10 Tf
+58 691 Td (3. The related room is set back to available.) Tj
+-58 -691 Td
+/F1 5 Tf
+58 677 Td () Tj
+-58 -677 Td
+/F1 10 Tf
+58 670 Td (4. The booking record is deleted after the room update succeeds.) Tj
+-58 -670 Td
+/F1 5 Tf
+58 656 Td () Tj
+-58 -656 Td
+/F1 10 Tf
+58 649 Td (5. The browser returns to the booking list, showing the active operational state.) Tj
+-58 -649 Td
+/F1 5 Tf
+58 635 Td () Tj
+-58 -635 Td
+/F2 12 Tf
+58 628 Td (Key explanation note:) Tj
+-58 -628 Td
+/F1 10 Tf
+58 611 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -611 Td
+/F1 10 Tf
+58 597 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -597 Td
+/F1 10 Tf
+58 583 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -583 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 39 of 56) Tj
+ET
+Q
+endstream
+endobj
+82 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 81 0 R >>
+endobj
+83 0 obj
+<< /Length 1489 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (40. Error handling approach) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The app uses try/catch blocks around database operations in route handlers.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. Server errors are logged to the console for developer visibility.) Tj
+-58 -712 Td
+/F1 5 Tf
+58 698 Td () Tj
+-58 -698 Td
+/F1 10 Tf
+58 691 Td (3. Validation errors return clear messages such as missing guest name, invalid) Tj
+-58 -691 Td
+/F1 10 Tf
+58 677 Td (   contact number, or invalid room.) Tj
+-58 -677 Td
+/F1 5 Tf
+58 663 Td () Tj
+-58 -663 Td
+/F1 10 Tf
+58 656 Td (4. Authentication failures use generic invalid-credential text so attackers do not) Tj
+-58 -656 Td
+/F1 10 Tf
+58 642 Td (   learn which usernames exist.) Tj
+-58 -642 Td
+/F1 5 Tf
+58 628 Td () Tj
+-58 -628 Td
+/F1 10 Tf
+58 621 Td (5. More advanced versions could use flash messages and centralized error middleware.) Tj
+-58 -621 Td
+/F1 5 Tf
+58 607 Td () Tj
+-58 -607 Td
+/F2 12 Tf
+58 600 Td (Key explanation note:) Tj
+-58 -600 Td
+/F1 10 Tf
+58 583 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -583 Td
+/F1 10 Tf
+58 569 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -555 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 40 of 56) Tj
+ET
+Q
+endstream
+endobj
+84 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 83 0 R >>
+endobj
+85 0 obj
+<< /Length 1597 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (41. Security observations) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The project demonstrates protected routes and session cookies, which are important) Tj
+-58 -733 Td
+/F1 10 Tf
+58 719 Td (   security building blocks.) Tj
+-58 -719 Td
+/F1 5 Tf
+58 705 Td () Tj
+-58 -705 Td
+/F1 10 Tf
+58 698 Td (2. The session cookie uses httpOnly and sameSite settings.) Tj
+-58 -698 Td
+/F1 5 Tf
+58 684 Td () Tj
+-58 -684 Td
+/F1 10 Tf
+58 677 Td (3. The current password comparison uses plain text and should be replaced with bcrypt) Tj
+-58 -677 Td
+/F1 10 Tf
+58 663 Td (   hashing for real systems.) Tj
+-58 -663 Td
+/F1 5 Tf
+58 649 Td () Tj
+-58 -649 Td
+/F1 10 Tf
+58 642 Td (4. The session secret should come from a secure environment variable outside source) Tj
+-58 -642 Td
+/F1 10 Tf
+58 628 Td (   control.) Tj
+-58 -628 Td
+/F1 5 Tf
+58 614 Td () Tj
+-58 -614 Td
+/F1 10 Tf
+58 607 Td (5. Input validation exists, but further sanitization and CSRF protection would) Tj
+-58 -607 Td
+/F1 10 Tf
+58 593 Td (   strengthen production security.) Tj
+-58 -593 Td
+/F1 5 Tf
+58 579 Td () Tj
+-58 -579 Td
+/F2 12 Tf
+58 572 Td (Key explanation note:) Tj
+-58 -572 Td
+/F1 10 Tf
+58 555 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -541 Td
+/F1 10 Tf
+58 527 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -527 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 41 of 56) Tj
+ET
+Q
+endstream
+endobj
+86 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 85 0 R >>
+endobj
+87 0 obj
+<< /Length 1599 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (42. Performance considerations) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The app is lightweight and suitable for local demonstration workloads.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. Dashboard queries are simple, but large hotels would need indexes, pagination, and) Tj
+-58 -712 Td
+/F1 10 Tf
+58 698 Td (   aggregation pipelines.) Tj
+-58 -698 Td
+/F1 5 Tf
+58 684 Td () Tj
+-58 -684 Td
+/F1 10 Tf
+58 677 Td (3. The bookings route limits records to fifty, which protects the table from growing) Tj
+-58 -677 Td
+/F1 10 Tf
+58 663 Td (   too large during normal use.) Tj
+-58 -663 Td
+/F1 5 Tf
+58 649 Td () Tj
+-58 -649 Td
+/F1 10 Tf
+58 642 Td (4. Static CSS is served directly by Express, which is acceptable for development and) Tj
+-58 -642 Td
+/F1 10 Tf
+58 628 Td (   small demos.) Tj
+-58 -628 Td
+/F1 5 Tf
+58 614 Td () Tj
+-58 -614 Td
+/F1 10 Tf
+58 607 Td (5. A production deployment would typically use a reverse proxy or CDN for static) Tj
+-58 -607 Td
+/F1 10 Tf
+58 593 Td (   assets.) Tj
+-58 -593 Td
+/F1 5 Tf
+58 579 Td () Tj
+-58 -579 Td
+/F2 12 Tf
+58 572 Td (Key explanation note:) Tj
+-58 -572 Td
+/F1 10 Tf
+58 555 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -541 Td
+/F1 10 Tf
+58 527 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -527 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 42 of 56) Tj
+ET
+Q
+endstream
+endobj
+88 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 87 0 R >>
+endobj
+89 0 obj
+<< /Length 1406 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (43. Maintainability considerations) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The project separates database models from views and public assets.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. The central app.js file is easy to follow for a small project, but routes could be) Tj
+-58 -712 Td
+/F1 10 Tf
+58 698 Td (   split into modules as the app grows.) Tj
+-58 -698 Td
+/F1 5 Tf
+58 684 Td () Tj
+-58 -684 Td
+/F1 10 Tf
+58 677 Td (3. Reusable layouts and navbar includes reduce duplicated template code.) Tj
+-58 -677 Td
+/F1 5 Tf
+58 663 Td () Tj
+-58 -663 Td
+/F1 10 Tf
+58 656 Td (4. Keeping README instructions current helps new developers run the app quickly.) Tj
+-58 -656 Td
+/F1 5 Tf
+58 642 Td () Tj
+-58 -642 Td
+/F1 10 Tf
+58 635 Td (5. Adding automated tests would make future changes safer.) Tj
+-58 -635 Td
+/F1 5 Tf
+58 621 Td () Tj
+-58 -621 Td
+/F2 12 Tf
+58 614 Td (Key explanation note:) Tj
+-58 -614 Td
+/F1 10 Tf
+58 597 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -597 Td
+/F1 10 Tf
+58 583 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -583 Td
+/F1 10 Tf
+58 569 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -569 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 43 of 56) Tj
+ET
+Q
+endstream
+endobj
+90 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 89 0 R >>
+endobj
+91 0 obj
+<< /Length 1348 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (44. Development setup) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. Developers need Node.js, npm, and a local MongoDB server.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. npm install installs dependencies listed in package.json and package-lock.json.) Tj
+-58 -712 Td
+/F1 5 Tf
+58 698 Td () Tj
+-58 -698 Td
+/F1 10 Tf
+58 691 Td (3. node app.js starts the Express server.) Tj
+-58 -691 Td
+/F1 5 Tf
+58 677 Td () Tj
+-58 -677 Td
+/F1 10 Tf
+58 670 Td (4. The home page is available at http://127.0.0.1:9999/ and the login page is) Tj
+-58 -670 Td
+/F1 10 Tf
+58 656 Td (   available at /login.) Tj
+-58 -656 Td
+/F1 5 Tf
+58 642 Td () Tj
+-58 -642 Td
+/F1 10 Tf
+58 635 Td (5. A MongoDB administrator user record is required before login can succeed.) Tj
+-58 -635 Td
+/F1 5 Tf
+58 621 Td () Tj
+-58 -621 Td
+/F2 12 Tf
+58 614 Td (Key explanation note:) Tj
+-58 -614 Td
+/F1 10 Tf
+58 597 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -597 Td
+/F1 10 Tf
+58 583 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -583 Td
+/F1 10 Tf
+58 569 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -569 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 44 of 56) Tj
+ET
+Q
+endstream
+endobj
+92 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 91 0 R >>
+endobj
+93 0 obj
+<< /Length 1510 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (45. MongoDB setup guidance) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The database name used by default is hotel_management.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. Administrator login records must be inserted into the collection used by the Admin) Tj
+-58 -712 Td
+/F1 10 Tf
+58 698 Td (   model.) Tj
+-58 -698 Td
+/F1 5 Tf
+58 684 Td () Tj
+-58 -684 Td
+/F1 10 Tf
+58 677 Td (3. Room and booking collections are managed by their Mongoose models.) Tj
+-58 -677 Td
+/F1 5 Tf
+58 663 Td () Tj
+-58 -663 Td
+/F1 10 Tf
+58 656 Td (4. Running MongoDB locally is essential because route handlers depend on database) Tj
+-58 -656 Td
+/F1 10 Tf
+58 642 Td (   queries.) Tj
+-58 -642 Td
+/F1 5 Tf
+58 628 Td () Tj
+-58 -628 Td
+/F1 10 Tf
+58 621 Td (5. If the app cannot connect, developers should check whether the MongoDB service is) Tj
+-58 -621 Td
+/F1 10 Tf
+58 607 Td (   started and listening on 127.0.0.1:27017.) Tj
+-58 -607 Td
+/F1 5 Tf
+58 593 Td () Tj
+-58 -593 Td
+/F2 12 Tf
+58 586 Td (Key explanation note:) Tj
+-58 -586 Td
+/F1 10 Tf
+58 569 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -541 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 45 of 56) Tj
+ET
+Q
+endstream
+endobj
+94 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 93 0 R >>
+endobj
+95 0 obj
+<< /Length 1492 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (46. Presentation talking points) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. Begin by explaining the problem: hotels need a quick way to manage rooms and) Tj
+-58 -733 Td
+/F1 10 Tf
+58 719 Td (   bookings.) Tj
+-58 -719 Td
+/F1 5 Tf
+58 705 Td () Tj
+-58 -705 Td
+/F1 10 Tf
+58 698 Td (2. Show the public home page to demonstrate customer-facing branding.) Tj
+-58 -698 Td
+/F1 5 Tf
+58 684 Td () Tj
+-58 -684 Td
+/F1 10 Tf
+58 677 Td (3. Log in as an administrator to demonstrate protected access.) Tj
+-58 -677 Td
+/F1 5 Tf
+58 663 Td () Tj
+-58 -663 Td
+/F1 10 Tf
+58 656 Td (4. Review the dashboard metrics, booking list, new booking form, and checkout) Tj
+-58 -656 Td
+/F1 10 Tf
+58 642 Td (   behavior.) Tj
+-58 -642 Td
+/F1 5 Tf
+58 628 Td () Tj
+-58 -628 Td
+/F1 10 Tf
+58 621 Td (5. End by describing how MongoDB persists the information and how future features can) Tj
+-58 -621 Td
+/F1 10 Tf
+58 607 Td (   extend the system.) Tj
+-58 -607 Td
+/F1 5 Tf
+58 593 Td () Tj
+-58 -593 Td
+/F2 12 Tf
+58 586 Td (Key explanation note:) Tj
+-58 -586 Td
+/F1 10 Tf
+58 569 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -541 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 46 of 56) Tj
+ET
+Q
+endstream
+endobj
+96 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 95 0 R >>
+endobj
+97 0 obj
+<< /Length 1327 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (47. Code walkthrough order) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. Start with package.json to explain dependencies.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. Open app.js to discuss imports, database connection, middleware, session setup,) Tj
+-58 -712 Td
+/F1 10 Tf
+58 698 Td (   and routes.) Tj
+-58 -698 Td
+/F1 5 Tf
+58 684 Td () Tj
+-58 -684 Td
+/F1 10 Tf
+58 677 Td (3. Open the models folder to explain schemas and collections.) Tj
+-58 -677 Td
+/F1 5 Tf
+58 663 Td () Tj
+-58 -663 Td
+/F1 10 Tf
+58 656 Td (4. Open the views folder to show how EJS pages are rendered.) Tj
+-58 -656 Td
+/F1 5 Tf
+58 642 Td () Tj
+-58 -642 Td
+/F1 10 Tf
+58 635 Td (5. Open public/home.css to show how the user interface is styled.) Tj
+-58 -635 Td
+/F1 5 Tf
+58 621 Td () Tj
+-58 -621 Td
+/F2 12 Tf
+58 614 Td (Key explanation note:) Tj
+-58 -614 Td
+/F1 10 Tf
+58 597 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -597 Td
+/F1 10 Tf
+58 583 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -583 Td
+/F1 10 Tf
+58 569 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -569 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 47 of 56) Tj
+ET
+Q
+endstream
+endobj
+98 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 97 0 R >>
+endobj
+99 0 obj
+<< /Length 1433 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (48. Strengths of the project) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. The project has a clear business theme that is easy for reviewers to understand.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. It demonstrates both public and private web application areas.) Tj
+-58 -712 Td
+/F1 5 Tf
+58 698 Td () Tj
+-58 -698 Td
+/F1 10 Tf
+58 691 Td (3. It uses persistent database models instead of only static HTML.) Tj
+-58 -691 Td
+/F1 5 Tf
+58 677 Td () Tj
+-58 -677 Td
+/F1 10 Tf
+58 670 Td (4. It includes real operational actions such as creating a booking and checking out a) Tj
+-58 -670 Td
+/F1 10 Tf
+58 656 Td (   guest.) Tj
+-58 -656 Td
+/F1 5 Tf
+58 642 Td () Tj
+-58 -642 Td
+/F1 10 Tf
+58 635 Td (5. Its UI is more polished than a minimal CRUD demo, which improves presentation) Tj
+-58 -635 Td
+/F1 10 Tf
+58 621 Td (   quality.) Tj
+-58 -621 Td
+/F1 5 Tf
+58 607 Td () Tj
+-58 -607 Td
+/F2 12 Tf
+58 600 Td (Key explanation note:) Tj
+-58 -600 Td
+/F1 10 Tf
+58 583 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -583 Td
+/F1 10 Tf
+58 569 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -555 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 48 of 56) Tj
+ET
+Q
+endstream
+endobj
+100 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 99 0 R >>
+endobj
+101 0 obj
+<< /Length 1446 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (49. Known limitations) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. Passwords are stored and compared as plain text in the current educational) Tj
+-58 -733 Td
+/F1 10 Tf
+58 719 Td (   version.) Tj
+-58 -719 Td
+/F1 5 Tf
+58 705 Td () Tj
+-58 -705 Td
+/F1 10 Tf
+58 698 Td (2. Check-in and checkout are stored as strings instead of Date values.) Tj
+-58 -698 Td
+/F1 5 Tf
+58 684 Td () Tj
+-58 -684 Td
+/F1 10 Tf
+58 677 Td (3. There is no role hierarchy, so all authenticated admins have the same permissions.) Tj
+-58 -677 Td
+/F1 5 Tf
+58 663 Td () Tj
+-58 -663 Td
+/F1 10 Tf
+58 656 Td (4. There is no payment, invoice, housekeeping, or inventory module yet.) Tj
+-58 -656 Td
+/F1 5 Tf
+58 642 Td () Tj
+-58 -642 Td
+/F1 10 Tf
+58 635 Td (5. The test script currently does not run automated tests, so adding tests should be) Tj
+-58 -635 Td
+/F1 10 Tf
+58 621 Td (   a future priority.) Tj
+-58 -621 Td
+/F1 5 Tf
+58 607 Td () Tj
+-58 -607 Td
+/F2 12 Tf
+58 600 Td (Key explanation note:) Tj
+-58 -600 Td
+/F1 10 Tf
+58 583 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -583 Td
+/F1 10 Tf
+58 569 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -555 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 49 of 56) Tj
+ET
+Q
+endstream
+endobj
+102 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 101 0 R >>
+endobj
+103 0 obj
+<< /Length 1510 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (50. Future enhancement ideas) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. Add password hashing with bcrypt and a secure registration or admin-management) Tj
+-58 -733 Td
+/F1 10 Tf
+58 719 Td (   flow.) Tj
+-58 -719 Td
+/F1 5 Tf
+58 705 Td () Tj
+-58 -705 Td
+/F1 10 Tf
+58 698 Td (2. Add room categories such as standard, deluxe, suite, and family room.) Tj
+-58 -698 Td
+/F1 5 Tf
+58 684 Td () Tj
+-58 -684 Td
+/F1 10 Tf
+58 677 Td (3. Add booking date conflict checks so the same room can be reserved for non-) Tj
+-58 -677 Td
+/F1 10 Tf
+58 663 Td (   overlapping future stays.) Tj
+-58 -663 Td
+/F1 5 Tf
+58 649 Td () Tj
+-58 -649 Td
+/F1 10 Tf
+58 642 Td (4. Add reports for occupancy trends, revenue, and monthly booking counts.) Tj
+-58 -642 Td
+/F1 5 Tf
+58 628 Td () Tj
+-58 -628 Td
+/F1 10 Tf
+58 621 Td (5. Add automated tests for authentication, room locking, booking creation, and) Tj
+-58 -621 Td
+/F1 10 Tf
+58 607 Td (   checkout behavior.) Tj
+-58 -607 Td
+/F1 5 Tf
+58 593 Td () Tj
+-58 -593 Td
+/F2 12 Tf
+58 586 Td (Key explanation note:) Tj
+-58 -586 Td
+/F1 10 Tf
+58 569 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -541 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 50 of 56) Tj
+ET
+Q
+endstream
+endobj
+104 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 103 0 R >>
+endobj
+105 0 obj
+<< /Length 1443 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (51. Suggested database improvements) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. Add unique indexes for room numbers and administrator usernames.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. Use Date fields for check-in and checkout so the system can compare and sort by) Tj
+-58 -712 Td
+/F1 10 Tf
+58 698 Td (   time.) Tj
+-58 -698 Td
+/F1 5 Tf
+58 684 Td () Tj
+-58 -684 Td
+/F1 10 Tf
+58 677 Td (3. Store booking status values such as active, completed, cancelled, and no-show.) Tj
+-58 -677 Td
+/F1 5 Tf
+58 663 Td () Tj
+-58 -663 Td
+/F1 10 Tf
+58 656 Td (4. Add createdAt and updatedAt timestamps to models for auditing.) Tj
+-58 -656 Td
+/F1 5 Tf
+58 642 Td () Tj
+-58 -642 Td
+/F1 10 Tf
+58 635 Td (5. Use references between bookings and rooms if the application needs richer) Tj
+-58 -635 Td
+/F1 10 Tf
+58 621 Td (   relational behavior.) Tj
+-58 -621 Td
+/F1 5 Tf
+58 607 Td () Tj
+-58 -607 Td
+/F2 12 Tf
+58 600 Td (Key explanation note:) Tj
+-58 -600 Td
+/F1 10 Tf
+58 583 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -583 Td
+/F1 10 Tf
+58 569 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -555 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 51 of 56) Tj
+ET
+Q
+endstream
+endobj
+106 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 105 0 R >>
+endobj
+107 0 obj
+<< /Length 1313 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (52. Suggested UI improvements) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. Replace free-text room entry with a dropdown of available rooms.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. Add toast or flash messages after successful booking and checkout actions.) Tj
+-58 -712 Td
+/F1 5 Tf
+58 698 Td () Tj
+-58 -698 Td
+/F1 10 Tf
+58 691 Td (3. Add filters for room status, price range, and booking date.) Tj
+-58 -691 Td
+/F1 5 Tf
+58 677 Td () Tj
+-58 -677 Td
+/F1 10 Tf
+58 670 Td (4. Add confirmation dialogs before checkout or destructive actions.) Tj
+-58 -670 Td
+/F1 5 Tf
+58 656 Td () Tj
+-58 -656 Td
+/F1 10 Tf
+58 649 Td (5. Add loading, empty, and error states for a smoother administrative experience.) Tj
+-58 -649 Td
+/F1 5 Tf
+58 635 Td () Tj
+-58 -635 Td
+/F2 12 Tf
+58 628 Td (Key explanation note:) Tj
+-58 -628 Td
+/F1 10 Tf
+58 611 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -611 Td
+/F1 10 Tf
+58 597 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -597 Td
+/F1 10 Tf
+58 583 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -583 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 52 of 56) Tj
+ET
+Q
+endstream
+endobj
+108 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 107 0 R >>
+endobj
+109 0 obj
+<< /Length 1520 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (53. Suggested deployment plan) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. Move configuration values such as port, database URL, and session secret into) Tj
+-58 -733 Td
+/F1 10 Tf
+58 719 Td (   environment variables.) Tj
+-58 -719 Td
+/F1 5 Tf
+58 705 Td () Tj
+-58 -705 Td
+/F1 10 Tf
+58 698 Td (2. Use a managed MongoDB service or a secured database server for production data.) Tj
+-58 -698 Td
+/F1 5 Tf
+58 684 Td () Tj
+-58 -684 Td
+/F1 10 Tf
+58 677 Td (3. Run the Node.js application behind a process manager such as PM2 or a container) Tj
+-58 -677 Td
+/F1 10 Tf
+58 663 Td (   platform.) Tj
+-58 -663 Td
+/F1 5 Tf
+58 649 Td () Tj
+-58 -649 Td
+/F1 10 Tf
+58 642 Td (4. Serve the site over HTTPS and configure secure cookies in production.) Tj
+-58 -642 Td
+/F1 5 Tf
+58 628 Td () Tj
+-58 -628 Td
+/F1 10 Tf
+58 621 Td (5. Add logging, backups, and monitoring before using the system with real hotel) Tj
+-58 -621 Td
+/F1 10 Tf
+58 607 Td (   information.) Tj
+-58 -607 Td
+/F1 5 Tf
+58 593 Td () Tj
+-58 -593 Td
+/F2 12 Tf
+58 586 Td (Key explanation note:) Tj
+-58 -586 Td
+/F1 10 Tf
+58 569 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -541 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 53 of 56) Tj
+ET
+Q
+endstream
+endobj
+110 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 109 0 R >>
+endobj
+111 0 obj
+<< /Length 1498 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (54. Testing strategy) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. Start with syntax checks for JavaScript files to catch parsing errors.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. Add unit tests for utility logic and validation functions after routes are) Tj
+-58 -712 Td
+/F1 10 Tf
+58 698 Td (   modularized.) Tj
+-58 -698 Td
+/F1 5 Tf
+58 684 Td () Tj
+-58 -684 Td
+/F1 10 Tf
+58 677 Td (3. Add integration tests for login, protected route redirects, booking creation, and) Tj
+-58 -677 Td
+/F1 10 Tf
+58 663 Td (   checkout.) Tj
+-58 -663 Td
+/F1 5 Tf
+58 649 Td () Tj
+-58 -649 Td
+/F1 10 Tf
+58 642 Td (4. Use a test MongoDB database so automated tests do not modify development data.) Tj
+-58 -642 Td
+/F1 5 Tf
+58 628 Td () Tj
+-58 -628 Td
+/F1 10 Tf
+58 621 Td (5. Include manual browser testing for responsive layouts and end-to-end presentation) Tj
+-58 -621 Td
+/F1 10 Tf
+58 607 Td (   flow.) Tj
+-58 -607 Td
+/F1 5 Tf
+58 593 Td () Tj
+-58 -593 Td
+/F2 12 Tf
+58 586 Td (Key explanation note:) Tj
+-58 -586 Td
+/F1 10 Tf
+58 569 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -569 Td
+/F1 10 Tf
+58 555 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -555 Td
+/F1 10 Tf
+58 541 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -541 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 54 of 56) Tj
+ET
+Q
+endstream
+endobj
+112 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 111 0 R >>
+endobj
+113 0 obj
+<< /Length 1717 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (55. Project conclusion) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. HotelOps is a complete educational demonstration of a small hotel management web) Tj
+-58 -733 Td
+/F1 10 Tf
+58 719 Td (   application.) Tj
+-58 -719 Td
+/F1 5 Tf
+58 705 Td () Tj
+-58 -705 Td
+/F1 10 Tf
+58 698 Td (2. It combines routing, templates, sessions, database models, dashboard metrics,) Tj
+-58 -698 Td
+/F1 10 Tf
+58 684 Td (   booking operations, and custom styling.) Tj
+-58 -684 Td
+/F1 5 Tf
+58 670 Td () Tj
+-58 -670 Td
+/F1 10 Tf
+58 663 Td (3. The codebase is simple enough to explain but realistic enough to show meaningful) Tj
+-58 -663 Td
+/F1 10 Tf
+58 649 Td (   business workflow.) Tj
+-58 -649 Td
+/F1 5 Tf
+58 635 Td () Tj
+-58 -635 Td
+/F1 10 Tf
+58 628 Td (4. The project can be expanded into a stronger system by improving security,) Tj
+-58 -628 Td
+/F1 10 Tf
+58 614 Td (   validation, reporting, and deployment practices.) Tj
+-58 -614 Td
+/F1 5 Tf
+58 600 Td () Tj
+-58 -600 Td
+/F1 10 Tf
+58 593 Td (5. For a presentation, the best story is the complete guest lifecycle from public) Tj
+-58 -593 Td
+/F1 10 Tf
+58 579 Td (   discovery to admin booking and checkout.) Tj
+-58 -579 Td
+/F1 5 Tf
+58 565 Td () Tj
+-58 -565 Td
+/F2 12 Tf
+58 558 Td (Key explanation note:) Tj
+-58 -558 Td
+/F1 10 Tf
+58 541 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -541 Td
+/F1 10 Tf
+58 527 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -527 Td
+/F1 10 Tf
+58 513 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -513 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 55 of 56) Tj
+ET
+Q
+endstream
+endobj
+114 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 113 0 R >>
+endobj
+115 0 obj
+<< /Length 1240 >>
+stream
+q
+BT
+/F2 18 Tf
+58 770 Td (56. Appendix: final summary) Tj
+-58 -770 Td
+/F1 8 Tf
+58 744 Td () Tj
+-58 -744 Td
+/F1 10 Tf
+58 733 Td (1. HotelOps demonstrates a clear hotel workflow.) Tj
+-58 -733 Td
+/F1 5 Tf
+58 719 Td () Tj
+-58 -719 Td
+/F1 10 Tf
+58 712 Td (2. It uses a realistic full-stack JavaScript architecture.) Tj
+-58 -712 Td
+/F1 5 Tf
+58 698 Td () Tj
+-58 -698 Td
+/F1 10 Tf
+58 691 Td (3. It separates models, views, public assets, and route logic.) Tj
+-58 -691 Td
+/F1 5 Tf
+58 677 Td () Tj
+-58 -677 Td
+/F1 10 Tf
+58 670 Td (4. It includes protected administration pages.) Tj
+-58 -670 Td
+/F1 5 Tf
+58 656 Td () Tj
+-58 -656 Td
+/F1 10 Tf
+58 649 Td (5. It is ready for explanation, presentation, and future enhancement.) Tj
+-58 -649 Td
+/F1 5 Tf
+58 635 Td () Tj
+-58 -635 Td
+/F2 12 Tf
+58 628 Td (Key explanation note:) Tj
+-58 -628 Td
+/F1 10 Tf
+58 611 Td (This page is intentionally concise so the PDF can be used as a speaking guide.) Tj
+-58 -611 Td
+/F1 10 Tf
+58 597 Td (During a live explanation, connect this topic back to app.js, the models folder,) Tj
+-58 -597 Td
+/F1 10 Tf
+58 583 Td (the EJS templates, or the public stylesheet depending on the page theme.) Tj
+-58 -583 Td
+/F1 9 Tf
+58 32 Td (HotelOps Project Explanation | Page 56 of 56) Tj
+ET
+Q
+endstream
+endobj
+116 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 115 0 R >>
+endobj
+xref
+0 117
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000515 00000 n 
+0000000585 00000 n 
+0000000660 00000 n 
+0000001780 00000 n 
+0000001916 00000 n 
+0000003981 00000 n 
+0000004117 00000 n 
+0000006174 00000 n 
+0000006311 00000 n 
+0000008267 00000 n 
+0000008405 00000 n 
+0000010030 00000 n 
+0000010168 00000 n 
+0000011871 00000 n 
+0000012009 00000 n 
+0000013748 00000 n 
+0000013886 00000 n 
+0000015566 00000 n 
+0000015704 00000 n 
+0000017438 00000 n 
+0000017576 00000 n 
+0000019190 00000 n 
+0000019328 00000 n 
+0000020966 00000 n 
+0000021104 00000 n 
+0000022724 00000 n 
+0000022862 00000 n 
+0000024384 00000 n 
+0000024522 00000 n 
+0000026137 00000 n 
+0000026275 00000 n 
+0000027934 00000 n 
+0000028072 00000 n 
+0000029754 00000 n 
+0000029892 00000 n 
+0000031613 00000 n 
+0000031751 00000 n 
+0000033278 00000 n 
+0000033416 00000 n 
+0000035020 00000 n 
+0000035158 00000 n 
+0000036655 00000 n 
+0000036793 00000 n 
+0000038368 00000 n 
+0000038506 00000 n 
+0000040082 00000 n 
+0000040220 00000 n 
+0000041948 00000 n 
+0000042086 00000 n 
+0000043584 00000 n 
+0000043722 00000 n 
+0000045279 00000 n 
+0000045417 00000 n 
+0000046979 00000 n 
+0000047117 00000 n 
+0000048674 00000 n 
+0000048812 00000 n 
+0000050378 00000 n 
+0000050516 00000 n 
+0000051982 00000 n 
+0000052120 00000 n 
+0000053620 00000 n 
+0000053758 00000 n 
+0000055312 00000 n 
+0000055450 00000 n 
+0000057137 00000 n 
+0000057275 00000 n 
+0000058895 00000 n 
+0000059033 00000 n 
+0000060617 00000 n 
+0000060755 00000 n 
+0000062312 00000 n 
+0000062450 00000 n 
+0000063939 00000 n 
+0000064077 00000 n 
+0000065481 00000 n 
+0000065619 00000 n 
+0000067003 00000 n 
+0000067141 00000 n 
+0000068476 00000 n 
+0000068614 00000 n 
+0000070156 00000 n 
+0000070294 00000 n 
+0000071944 00000 n 
+0000072082 00000 n 
+0000073734 00000 n 
+0000073872 00000 n 
+0000075331 00000 n 
+0000075469 00000 n 
+0000076870 00000 n 
+0000077008 00000 n 
+0000078571 00000 n 
+0000078709 00000 n 
+0000080254 00000 n 
+0000080392 00000 n 
+0000081772 00000 n 
+0000081910 00000 n 
+0000083396 00000 n 
+0000083535 00000 n 
+0000085035 00000 n 
+0000085175 00000 n 
+0000086739 00000 n 
+0000086879 00000 n 
+0000088376 00000 n 
+0000088516 00000 n 
+0000089883 00000 n 
+0000090023 00000 n 
+0000091597 00000 n 
+0000091737 00000 n 
+0000093289 00000 n 
+0000093429 00000 n 
+0000095200 00000 n 
+0000095340 00000 n 
+0000096634 00000 n 
+trailer
+<< /Size 117 /Root 1 0 R >>
+startxref
+96774
+%%EOF
