@@ -218,6 +218,11 @@ app.post("/admin/booking/new_booking", requireAdmin, async (req, res) => {
     if (!Number.isFinite(room)) return res.status(400).send("Valid room number is required.");
     if (!checkin) return res.status(400).send("Check-in date & time is required.");
     if (!checkout) return res.status(400).send("Check-out date & time is required.");
+    if (checkout <= checkin) {
+      return res
+        .status(400)
+        .send("Check-out date & time must be later than check-in date & time.");
+    }
 
     const lockedRoom = await Room.findOneAndUpdate(
       { room, status: { $regex: /^available\s*$/i } },
